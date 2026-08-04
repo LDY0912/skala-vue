@@ -1,13 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
-defineProps({
-  showStoreInfo: {
-    type: Boolean,
-    default: false,
-  },
-})
-
 const router = useRouter()
 </script>
 
@@ -20,12 +13,9 @@ const router = useRouter()
       <ul>
         <li><code>components/Exercise3Childs/</code>의 공통 부품 재사용</li>
         <li>클라이언트 사이드 라우팅을 통한 새로고침 없는 화면 전환</li>
-        <li v-if="showStoreInfo">Pinia 스토어를 통한 섭씨·화씨 단위 설정 공유</li>
         <li>URL 쿼리 스트링 매핑을 활용한 검색 상태 동기화</li>
       </ul>
     </div>
-
-    <button type="button" @click="router.push('/')"></button>
 
     <button type="button" @click="router.push('/')">대시보드 홈으로 이동</button>
   </section>
