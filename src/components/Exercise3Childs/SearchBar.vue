@@ -8,6 +8,10 @@ defineProps({
     type: String,
     default: '',
   },
+  placeholder: {
+    type: String,
+    default: '도시 이름을 입력해 주세요.(서울, 수원, 부산)',
+  },
 })
 </script>
 
@@ -18,7 +22,7 @@ defineProps({
       type="text"
       :value="currentQuery"
       @input="$emit('update-query', $event.target.value)"
-      placeholder="도시 이름을 입력해 주세요.(서울, 수원, 부산)"
+      :placeholder="placeholder"
     />
     <p>검색 중인 도시: {{ currentQuery }}</p>
   </div>

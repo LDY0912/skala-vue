@@ -7,6 +7,8 @@ export const weatherList = [
     status: '맑음',
     humidity: 55,
     windSpeed: 2.5,
+    lat: 37.5665,
+    lon: 126.978,
   },
   {
     id: 'city_02',
@@ -16,6 +18,8 @@ export const weatherList = [
     status: '비',
     humidity: 78,
     windSpeed: 3.8,
+    lat: 37.2636,
+    lon: 127.0286,
   },
   {
     id: 'city_03',
@@ -25,9 +29,78 @@ export const weatherList = [
     status: '구름',
     humidity: 68,
     windSpeed: 4.2,
+    lat: 35.1796,
+    lon: 129.0756,
   },
 ]
 
 export function findWeatherById(cityId) {
   return weatherList.find((city) => city.id === cityId)
+}
+
+function createGlobalLocation(
+  id,
+  name,
+  nameEn,
+  country,
+  countryEn,
+  countryCode,
+  flag,
+  lat,
+  lon,
+  temp = 20,
+) {
+  return {
+    id,
+    name,
+    nameEn,
+    country,
+    countryEn,
+    countryCode,
+    flag,
+    location: `${country} ${name}`,
+    temp,
+    status: '날씨 확인 중',
+    humidity: 0,
+    windSpeed: 0,
+    lat,
+    lon,
+  }
+}
+
+export const globalWeatherLocations = [
+  createGlobalLocation('kr_seoul', '서울', 'Seoul', '대한민국', 'South Korea', 'KR', '🇰🇷', 37.5665, 126.978, 28),
+  createGlobalLocation('jp_tokyo', '도쿄', 'Tokyo', '일본', 'Japan', 'JP', '🇯🇵', 35.6762, 139.6503, 27),
+  createGlobalLocation('cn_beijing', '베이징', 'Beijing', '중국', 'China', 'CN', '🇨🇳', 39.9042, 116.4074, 26),
+  createGlobalLocation('sg_singapore', '싱가포르', 'Singapore', '싱가포르', 'Singapore', 'SG', '🇸🇬', 1.3521, 103.8198, 31),
+  createGlobalLocation('th_bangkok', '방콕', 'Bangkok', '태국', 'Thailand', 'TH', '🇹🇭', 13.7563, 100.5018, 32),
+  createGlobalLocation('vn_hanoi', '하노이', 'Hanoi', '베트남', 'Vietnam', 'VN', '🇻🇳', 21.0278, 105.8342, 30),
+  createGlobalLocation('in_new_delhi', '뉴델리', 'New Delhi', '인도', 'India', 'IN', '🇮🇳', 28.6139, 77.209, 33),
+  createGlobalLocation('id_jakarta', '자카르타', 'Jakarta', '인도네시아', 'Indonesia', 'ID', '🇮🇩', -6.2088, 106.8456, 31),
+  createGlobalLocation('ph_manila', '마닐라', 'Manila', '필리핀', 'Philippines', 'PH', '🇵🇭', 14.5995, 120.9842, 31),
+  createGlobalLocation('ae_dubai', '두바이', 'Dubai', '아랍에미리트', 'United Arab Emirates', 'AE', '🇦🇪', 25.2048, 55.2708, 36),
+  createGlobalLocation('sa_riyadh', '리야드', 'Riyadh', '사우디아라비아', 'Saudi Arabia', 'SA', '🇸🇦', 24.7136, 46.6753, 37),
+  createGlobalLocation('tr_istanbul', '이스탄불', 'Istanbul', '튀르키예', 'Turkey', 'TR', '🇹🇷', 41.0082, 28.9784, 25),
+  createGlobalLocation('gb_london', '런던', 'London', '영국', 'United Kingdom', 'GB', '🇬🇧', 51.5074, -0.1278, 19),
+  createGlobalLocation('fr_paris', '파리', 'Paris', '프랑스', 'France', 'FR', '🇫🇷', 48.8566, 2.3522, 22),
+  createGlobalLocation('de_berlin', '베를린', 'Berlin', '독일', 'Germany', 'DE', '🇩🇪', 52.52, 13.405, 21),
+  createGlobalLocation('it_rome', '로마', 'Rome', '이탈리아', 'Italy', 'IT', '🇮🇹', 41.9028, 12.4964, 27),
+  createGlobalLocation('es_madrid', '마드리드', 'Madrid', '스페인', 'Spain', 'ES', '🇪🇸', 40.4168, -3.7038, 29),
+  createGlobalLocation('nl_amsterdam', '암스테르담', 'Amsterdam', '네덜란드', 'Netherlands', 'NL', '🇳🇱', 52.3676, 4.9041, 20),
+  createGlobalLocation('no_oslo', '오슬로', 'Oslo', '노르웨이', 'Norway', 'NO', '🇳🇴', 59.9139, 10.7522, 16),
+  createGlobalLocation('ru_moscow', '모스크바', 'Moscow', '러시아', 'Russia', 'RU', '🇷🇺', 55.7558, 37.6173, 18),
+  createGlobalLocation('eg_cairo', '카이로', 'Cairo', '이집트', 'Egypt', 'EG', '🇪🇬', 30.0444, 31.2357, 34),
+  createGlobalLocation('za_cape_town', '케이프타운', 'Cape Town', '남아프리카공화국', 'South Africa', 'ZA', '🇿🇦', -33.9249, 18.4241, 20),
+  createGlobalLocation('ke_nairobi', '나이로비', 'Nairobi', '케냐', 'Kenya', 'KE', '🇰🇪', -1.2921, 36.8219, 24),
+  createGlobalLocation('us_new_york', '뉴욕', 'New York', '미국', 'United States', 'US', '🇺🇸', 40.7128, -74.006, 25),
+  createGlobalLocation('ca_toronto', '토론토', 'Toronto', '캐나다', 'Canada', 'CA', '🇨🇦', 43.6532, -79.3832, 22),
+  createGlobalLocation('mx_mexico_city', '멕시코시티', 'Mexico City', '멕시코', 'Mexico', 'MX', '🇲🇽', 19.4326, -99.1332, 24),
+  createGlobalLocation('br_sao_paulo', '상파울루', 'Sao Paulo', '브라질', 'Brazil', 'BR', '🇧🇷', -23.5505, -46.6333, 25),
+  createGlobalLocation('ar_buenos_aires', '부에노스아이레스', 'Buenos Aires', '아르헨티나', 'Argentina', 'AR', '🇦🇷', -34.6037, -58.3816, 21),
+  createGlobalLocation('au_sydney', '시드니', 'Sydney', '호주', 'Australia', 'AU', '🇦🇺', -33.8688, 151.2093, 18),
+  createGlobalLocation('nz_auckland', '오클랜드', 'Auckland', '뉴질랜드', 'New Zealand', 'NZ', '🇳🇿', -36.8509, 174.7645, 17),
+]
+
+export function findGlobalWeatherById(cityId) {
+  return globalWeatherLocations.find((city) => city.id === cityId)
 }

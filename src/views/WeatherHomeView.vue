@@ -6,10 +6,14 @@ import SearchBar from '../components/Exercise3Childs/SearchBar.vue'
 import WeatherCard from '../components/Exercise3Childs/WeatherCard.vue'
 import { weatherList } from '../data/weather.js'
 
-defineProps({
+const props = defineProps({
   useConfigUnit: {
     type: Boolean,
     default: false,
+  },
+  routeBase: {
+    type: String,
+    default: '',
   },
 })
 
@@ -51,7 +55,7 @@ function selectCity(message) {
 }
 
 function showDetail(cityId) {
-  router.push('/weather/' + cityId)
+  router.push(`${props.routeBase}/weather/${cityId}`)
 }
 </script>
 

@@ -14,6 +14,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  homePath: {
+    type: String,
+    default: '/',
+  },
 })
 
 const router = useRouter()
@@ -62,7 +66,7 @@ watch(
       <p>요청한 도시 코드를 찾을 수 없습니다.</p>
     </div>
 
-    <button type="button" @click="router.push('/')">← 메인 대시보드 돌아가기</button>
+    <button type="button" @click="router.push(homePath)">← 메인 대시보드 돌아가기</button>
   </section>
 </template>
 

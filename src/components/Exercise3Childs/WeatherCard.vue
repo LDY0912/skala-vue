@@ -13,10 +13,14 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  removable: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 // 2. 상위로 송신할 두 가지 경로의 커스텀 이벤트 식별자 등록 (매크로)
-const emit = defineEmits(['select-card', 'click-detail'])
+const emit = defineEmits(['select-card', 'click-detail', 'remove-card'])
 
 const configStore = useConfigStore()
 const { unit, unitSymbol } = storeToRefs(configStore)
@@ -35,8 +39,16 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
 </script>
 
 <template>
-  <div class="weather-card" @click="emit('select-card', `${cityItem.name}이 선택되었습니다.`)">
-    <h4>{{ cityItem.name }} ({{ cityItem.status }})</h4>
+  <div
+    class="weather-card"
+    :class="{ removable }"
+    @click="emit('select-card', `${cityItem.name}이 선택되었습니다.`)"
+  >
+    <h4>
+      <span v-if="cityItem.flag">{{ cityItem.flag }} </span>{{ cityItem.name }}
+      <small v-if="cityItem.country">· {{ cityItem.country }}</small>
+      ({{ cityItem.status }})
+    </h4>
     <p>현재 기온: {{ displayTemp }}{{ displayUnitSymbol }}</p>
 
     <span v-if="cityItem.temp >= 25" class="badge hot">🔥 더움(25도 이상)</span>
@@ -47,6 +59,15 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
       @click.stop="emit('click-detail', cityItem.id, cityItem.name, cityItem.status)"
     >
       상세보기
+    </button>
+    <button
+      v-if="removable"
+      class="btn-remove"
+      type="button"
+      :aria-label="`${cityItem.name} 즐겨찾기 삭제`"
+      @click.stop="emit('remove-card', cityItem.id)"
+    >
+      삭제
     </button>
   </div>
 </template>
@@ -72,12 +93,21 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
   transform: translateY(-1px);
 }
 
+.weather-card.removable {
+  min-height: 105px;
+}
+
 h4,
 p {
   margin: 0;
   color: #315675;
   font-size: 13px;
   line-height: 1.55;
+}
+
+h4 small {
+  color: #728592;
+  font-size: 11px;
 }
 
 .badge {
@@ -115,6 +145,25 @@ p {
 
 .btn-detail:hover {
   background: #eeeeee;
+}
+
+.btn-remove {
+  position: absolute;
+  top: 50px;
+  right: 9px;
+  min-width: 59px;
+  height: 27px;
+  padding: 2px 7px;
+  border: 1px solid #e29a9a;
+  background: #fff6f6;
+  color: #c34949;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #ffe7e7;
 }
 
 @media (max-width: 480px) {

@@ -1,6 +1,13 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
+defineProps({
+  homePath: {
+    type: String,
+    default: '/',
+  },
+})
+
 const router = useRouter()
 </script>
 
@@ -17,7 +24,7 @@ const router = useRouter()
       </ul>
     </div>
 
-    <button type="button" @click="router.push('/')">대시보드 홈으로 이동</button>
+    <button type="button" @click="router.push(homePath)">대시보드 홈으로 이동</button>
   </section>
 </template>
 
