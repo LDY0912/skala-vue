@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import { env } from 'node:process'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -6,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: env.GITHUB_ACTIONS ? '/skala-vue/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
