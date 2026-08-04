@@ -1,21 +1,51 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      name: 'weather-home',
+      components: {
+        exercise4: () => import('../views/WeatherHomeView.vue'),
+        exercise5: () => import('../views/WeatherHomeView.vue'),
+      },
+      props: {
+        exercise4: false,
+        exercise5: { useConfigUnit: true },
+      },
     },
     {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      name: 'weather-about',
+      components: {
+        exercise4: () => import('../views/WeatherAboutView.vue'),
+        exercise5: () => import('../views/WeatherAboutView.vue'),
+      },
+      props: {
+        exercise4: false,
+        exercise5: { showStoreInfo: true },
+      },
+    },
+    {
+      path: '/weather/:cityId',
+      name: 'weather-detail',
+      components: {
+        exercise4: () => import('../views/WeatherDetailView.vue'),
+        exercise5: () => import('../views/WeatherDetailView.vue'),
+      },
+      props: {
+        exercise4: true,
+        exercise5: (route) => ({ cityId: route.params.cityId, useConfigUnit: true }),
+      },
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      components: {
+        exercise4: () => import('../views/NotFoundView.vue'),
+        exercise5: () => import('../views/NotFoundView.vue'),
+      },
     },
   ],
 })
