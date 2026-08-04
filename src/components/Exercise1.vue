@@ -61,13 +61,18 @@ selectedCity.value = '카드를 클릭하거나 검색해 보세요.'
 <style scoped>
 .exercise-panel {
   min-width: 0;
+  padding: 22px;
+  border: 1px solid #e2e6ef;
+  border-radius: 17px;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 9px 26px rgb(24 37 63 / 6%);
 }
 
 h1 {
   margin: 0;
-  color: #183b5b;
-  font-size: 21px;
-  font-weight: 700;
+  color: #27364d;
+  font-size: 20px;
+  font-weight: 850;
   line-height: 1.4;
 }
 
@@ -79,24 +84,24 @@ h1::before {
 
 hr {
   height: 1px;
-  margin: 10px 0 20px;
+  margin: 11px 0 18px;
   border: 0;
-  background: #e3e8ed;
+  background: #e5e8ef;
 }
 
 .weather-section {
   margin-bottom: 12px;
-  padding: 12px 14px;
-  border: 1px solid #e3e8ed;
-  border-radius: 7px;
-  background: #f7f9fa;
+  padding: 16px;
+  border: 1px solid #e4e8f0;
+  border-radius: 13px;
+  background: #f8f9fd;
 }
 
 h3 {
   margin: 0 0 1px;
-  color: #315675;
+  color: #34435a;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.5;
 }
 
@@ -112,10 +117,11 @@ h3 {
 
 input {
   display: block;
-  width: calc(100% - 44px);
-  height: 28px;
-  padding: 3px 8px;
-  border: 1px solid #8b8b8b;
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid #d8deea;
+  border-radius: 10px;
   background: #fff;
   color: #34495e;
   font: inherit;
@@ -124,30 +130,32 @@ input {
 }
 
 input:focus {
-  border-color: #438ec5;
-  box-shadow: 0 0 0 1px #438ec5;
+  border-color: #7374e2;
+  box-shadow: 0 0 0 3px rgb(91 92 226 / 12%);
 }
 
 p {
   margin: 0;
-  color: #315675;
+  color: #52627a;
   font-size: 13px;
   line-height: 1.55;
 }
 
 .search-section > p {
-  margin-top: 2px;
+  margin-top: 6px;
+  color: #8b96a5;
+  font-size: 11px;
 }
 
 .city {
   position: relative;
-  min-height: 82px;
-  margin: 6px 0 9px;
-  padding: 10px 78px 9px 10px;
-  border: 1px solid #d8dfe5;
-  border-radius: 5px;
+  min-height: 94px;
+  margin: 8px 0 10px;
+  padding: 14px 88px 13px 14px;
+  border: 1px solid #e0e5ee;
+  border-radius: 12px;
   background: #fff;
-  box-shadow: 0 1px 2px rgb(20 50 75 / 7%);
+  box-shadow: 0 5px 15px rgb(24 37 63 / 5%);
   cursor: pointer;
   transition:
     border-color 0.15s,
@@ -155,15 +163,16 @@ p {
 }
 
 .city:hover {
-  border-color: #9eb8ca;
-  transform: translateY(-1px);
+  border-color: #c5c7ef;
+  box-shadow: 0 9px 20px rgb(69 70 198 / 9%);
+  transform: translateY(-2px);
 }
 
 .temp-badge {
   display: inline-block;
-  margin-top: 2px;
+  margin-top: 5px;
   padding: 2px 9px;
-  border-radius: 4px;
+  border-radius: 999px;
   color: #fff;
   font-size: 11px;
   line-height: 1.65;
@@ -173,13 +182,13 @@ p {
   margin-right: 5px;
 }
 .temp-badge.is-hot {
-  background: #ff6464;
+  background: linear-gradient(135deg, #ff7676, #ee5668);
 }
 .temp-badge.is-hot::before {
   content: '🔥';
 }
 .temp-badge.is-cool {
-  background: #42b9ed;
+  background: linear-gradient(135deg, #46bfe8, #4d8ee6);
 }
 .temp-badge.is-cool::before {
   content: '❄️';
@@ -188,30 +197,34 @@ p {
 button {
   position: absolute;
   top: 12px;
-  right: 9px;
-  min-width: 59px;
-  height: 28px;
-  padding: 2px 7px;
-  border: 1px solid #999;
-  background: #f7f7f7;
-  color: #284966;
+  right: 11px;
+  min-width: 68px;
+  height: 31px;
+  padding: 3px 9px;
+  border: 1px solid #d7dceb;
+  border-radius: 8px;
+  background: #f7f7ff;
+  color: #4f50c8;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 button:hover {
-  background: #eee;
+  border-color: #bfc1ee;
+  background: #ededff;
 }
 
 .selection-message {
   margin-top: 12px;
   padding: 8px 12px;
-  border-radius: 5px;
-  background: #e2f5e6;
-  color: #18944c;
-  font-size: 13px;
-  font-weight: 700;
+  border: 1px solid #d2ebdd;
+  border-radius: 10px;
+  background: #eef9f3;
+  color: #188256;
+  font-size: 11px;
+  font-weight: 800;
   text-align: center;
 }
 

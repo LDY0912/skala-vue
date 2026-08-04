@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 coverage
+public/data/valorant-schedule.json
 *.local
 .env.local
 .env.*.local

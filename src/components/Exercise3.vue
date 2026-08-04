@@ -75,13 +75,18 @@ const showDetail = (_cityId, cityName, status) => {
 <style scoped>
 .dashboard-wrapper {
   min-width: 0;
+  padding: 22px;
+  border: 1px solid #e2e6ef;
+  border-radius: 17px;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 9px 26px rgb(24 37 63 / 6%);
 }
 
 h1 {
   margin: 0;
-  color: #183b5b;
-  font-size: 21px;
-  font-weight: 700;
+  color: #27364d;
+  font-size: 20px;
+  font-weight: 850;
   line-height: 1.4;
 }
 
@@ -95,17 +100,18 @@ hr {
   height: 1px;
   margin: 10px 0 20px;
   border: 0;
-  background: #e3e8ed;
+  background: #e5e8ef;
 }
 
 .status-bar {
   margin-top: 12px;
   padding: 8px 12px;
-  border-radius: 5px;
-  background: #e2f5e6;
-  color: #18944c;
-  font-size: 13px;
-  font-weight: 700;
+  border: 1px solid #d2ebdd;
+  border-radius: 10px;
+  background: #eef9f3;
+  color: #188256;
+  font-size: 11px;
+  font-weight: 800;
   text-align: center;
 }
 </style>

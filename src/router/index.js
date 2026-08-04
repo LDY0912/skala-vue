@@ -89,6 +89,12 @@ const router = createRouter({
       meta: { requiresLabAuth: true, wide: true },
     },
     {
+      path: '/valorant',
+      name: 'valorant-schedule',
+      component: () => import('../views/ValorantScheduleView.vue'),
+      meta: { wide: true },
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('../views/NotFoundView.vue'),

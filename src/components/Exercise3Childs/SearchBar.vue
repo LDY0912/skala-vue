@@ -30,10 +30,10 @@ defineProps({
 
 <style scoped>
 .search-section h3 {
-  margin: 0 0 1px;
-  color: #315675;
+  margin: 0 0 7px;
+  color: #27364d;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.5;
 }
 
@@ -44,32 +44,30 @@ defineProps({
 
 input {
   display: block;
-  width: calc(100% - 44px);
-  height: 28px;
-  padding: 3px 8px;
-  border: 1px solid #8b8b8b;
-  background: #fff;
-  color: #34495e;
+  width: 100%;
+  height: 44px;
+  padding: 9px 13px;
+  border: 1px solid #dce2ec;
+  border-radius: 11px;
+  background: #f9faff;
+  color: #27364d;
   font: inherit;
   font-size: 13px;
   outline: none;
+  transition: 0.18s ease;
 }
 
 input:focus {
-  border-color: #438ec5;
-  box-shadow: 0 0 0 1px #438ec5;
+  border-color: #7576e6;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgb(91 92 226 / 12%);
 }
 
 p {
-  margin: 2px 0 0;
-  color: #315675;
-  font-size: 13px;
+  margin: 6px 2px 0;
+  color: #8a96a6;
+  font-size: 11px;
   line-height: 1.55;
 }
 
-@media (max-width: 480px) {
-  input {
-    width: 100%;
-  }
-}
 </style>

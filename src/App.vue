@@ -6,18 +6,44 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="site-shell" :class="{ wide: route.meta.wide }">
+  <div class="site-shell">
     <header class="site-header">
-      <RouterLink class="site-brand" to="/">🌦️ SKALA 날씨 대시보드</RouterLink>
+      <RouterLink class="site-brand" to="/" aria-label="SKALA 대시보드 홈">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>SKALA</strong>
+          <small>Vue Playground</small>
+        </span>
+      </RouterLink>
 
       <nav aria-label="화면 전환 메뉴">
-        <RouterLink to="/">최종과제</RouterLink>
-        <RouterLink to="/exercises">이전 과제 1~5</RouterLink>
-        <RouterLink to="/labs">API·JWT 실습</RouterLink>
+        <RouterLink to="/">
+          <span>🌤️</span>
+          <span><strong>세계 날씨</strong><small>OpenWeather</small></span>
+        </RouterLink>
+        <RouterLink to="/valorant">
+          <span>⚡</span>
+          <span><strong>발로란트</strong><small>대회 일정</small></span>
+        </RouterLink>
+        <RouterLink to="/exercises">
+          <span>📚</span>
+          <span><strong>과제 1–5</strong><small>Vue 실습</small></span>
+        </RouterLink>
+        <RouterLink to="/labs">
+          <span>🧪</span>
+          <span><strong>API · JWT</strong><small>통합 실습</small></span>
+        </RouterLink>
       </nav>
     </header>
 
-    <RouterView />
+    <div class="page-stage" :class="{ wide: route.meta.wide }">
+      <RouterView />
+    </div>
+
+    <footer class="site-footer">
+      <span>SKALA Vue Playground</span>
+      <small>Vue 3 · Pinia · Vue Router · REST API</small>
+    </footer>
   </div>
 </template>
 
@@ -26,95 +52,226 @@ const route = useRoute()
 
 body {
   min-width: 320px;
-  background: #f3f7fa;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
 }
 
 #app {
-  width: min(100%, 1080px);
+  width: 100%;
   margin: 0 auto;
-  padding: 22px 22px 56px;
-  color: #284966;
+  padding: 22px clamp(14px, 3vw, 32px) 42px;
+  color: var(--ink-800);
   font-weight: normal;
 }
 
 .site-shell {
   min-width: 0;
-  max-width: 676px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-.site-shell.wide {
-  max-width: 1036px;
+.page-stage {
+  max-width: 760px;
+  margin: 0 auto;
+  animation: page-enter 0.35s ease both;
+}
+
+.page-stage.wide {
+  max-width: 1180px;
 }
 
 .site-header {
+  position: sticky;
+  z-index: 20;
+  top: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 36px;
-  padding: 14px 16px;
-  border: 1px solid #dce7ee;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 5px 18px rgb(24 59 91 / 8%);
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 10px 12px 10px 14px;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 78%);
+  box-shadow:
+    0 10px 32px rgb(31 45 80 / 9%),
+    inset 0 0 0 1px rgb(226 232 244 / 55%);
+  backdrop-filter: blur(18px) saturate(155%);
 }
 
 .site-brand {
-  color: #183b5b;
-  font-size: 16px;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
   text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  background: linear-gradient(145deg, #7374ef, #4647c7);
+  box-shadow: 0 7px 16px rgb(80 81 205 / 28%);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.brand-copy {
+  display: grid;
+  line-height: 1.15;
+}
+
+.brand-copy strong {
+  color: var(--ink-950);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.brand-copy small {
+  color: var(--ink-400);
+  font-size: 9px;
+  font-weight: 700;
 }
 
 .site-header nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
+  gap: 5px;
 }
 
 .site-header nav a {
-  padding: 7px 11px;
-  border-radius: 7px;
-  color: #667985;
-  font-size: 13px;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 46px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: var(--ink-600);
   text-decoration: none;
 }
 
+.site-header nav a > span:first-child {
+  font-size: 16px;
+  filter: grayscale(0.25);
+}
+
+.site-header nav a > span:last-child {
+  display: grid;
+  line-height: 1.15;
+}
+
+.site-header nav strong {
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.site-header nav small {
+  margin-top: 2px;
+  color: #9aa4b3;
+  font-size: 8px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
 .site-header nav a:hover {
-  background: #eff8fd;
-  color: #078fce;
+  border-color: #e7e8fb;
+  color: var(--primary);
+  background: #f7f7ff;
+  transform: translateY(-1px);
 }
 
 .site-header nav a.router-link-exact-active {
-  background: #08a0e5;
-  color: #fff;
+  border-color: #e1e1fb;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  box-shadow: inset 0 0 0 1px rgb(91 92 226 / 4%);
 }
 
-@media (max-width: 600px) {
+.site-header nav a.router-link-exact-active small {
+  color: #7778cc;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 52px auto 0;
+  padding: 18px 4px 0;
+  border-top: 1px solid rgb(210 218 232 / 70%);
+  color: var(--ink-400);
+  font-size: 10px;
+}
+
+.site-footer span {
+  color: var(--ink-600);
+  font-weight: 800;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
   #app {
-    padding: 16px 14px 42px;
+    padding: 12px 12px 34px;
   }
 
   .site-header {
+    position: relative;
+    top: 0;
     align-items: stretch;
     flex-direction: column;
-    margin-bottom: 28px;
+    gap: 10px;
+    margin-bottom: 24px;
+    border-radius: 17px;
+  }
+
+  .site-brand {
+    padding: 2px;
+  }
+
+  .site-header nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
   }
 
   .site-header nav a {
-    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    padding: 7px 4px;
+    text-align: center;
+  }
+
+  .site-header nav a > span:first-child,
+  .site-header nav small {
+    display: none;
+  }
+
+  .site-header nav strong {
+    overflow: hidden;
+    font-size: 10px;
+    text-overflow: ellipsis;
+  }
+
+  .site-footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 36px;
     text-align: center;
   }
 }

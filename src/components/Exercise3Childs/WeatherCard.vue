@@ -75,22 +75,24 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
 <style scoped>
 .weather-card {
   position: relative;
-  min-height: 82px;
-  margin: 6px 0 9px;
-  padding: 10px 78px 9px 10px;
-  border: 1px solid #d8dfe5;
-  border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 0 1px 2px rgb(20 50 75 / 7%);
+  min-height: 94px;
+  margin: 8px 0 10px;
+  padding: 14px 92px 13px 14px;
+  border: 1px solid #e1e6ef;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #fff, #fafbff);
+  box-shadow: 0 5px 16px rgb(24 37 63 / 5%);
   cursor: pointer;
   transition:
-    border-color 0.15s,
-    transform 0.15s;
+    border-color 0.18s,
+    box-shadow 0.18s,
+    transform 0.18s;
 }
 
 .weather-card:hover {
-  border-color: #9eb8ca;
-  transform: translateY(-1px);
+  border-color: #c6c8f2;
+  box-shadow: 0 10px 22px rgb(69 70 198 / 10%);
+  transform: translateY(-2px);
 }
 
 .weather-card.removable {
@@ -100,75 +102,82 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
 h4,
 p {
   margin: 0;
-  color: #315675;
+  color: #34435a;
   font-size: 13px;
   line-height: 1.55;
 }
 
 h4 small {
-  color: #728592;
+  color: #8793a3;
   font-size: 11px;
 }
 
 .badge {
   display: inline-block;
-  margin-top: 2px;
-  padding: 2px 9px;
-  border-radius: 4px;
+  margin-top: 5px;
+  padding: 2px 8px;
+  border-radius: 999px;
   color: #ffffff;
   font-size: 11px;
   line-height: 1.65;
 }
 
 .hot {
-  background: #ff6464;
+  background: linear-gradient(135deg, #ff7575, #ee5667);
 }
 
 .cool {
-  background: #42b9ed;
+  background: linear-gradient(135deg, #45bfe8, #4e8ee7);
 }
 
 .btn-detail {
   position: absolute;
-  top: 12px;
-  right: 9px;
-  min-width: 59px;
-  height: 28px;
-  padding: 2px 7px;
-  border: 1px solid #999;
-  background: #f7f7f7;
-  color: #284966;
+  top: 13px;
+  right: 11px;
+  min-width: 68px;
+  height: 31px;
+  padding: 3px 9px;
+  border: 1px solid #d7dceb;
+  border-radius: 8px;
+  background: #fff;
+  color: #4f50c8;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 .btn-detail:hover {
-  background: #eeeeee;
+  border-color: #bfc1ee;
+  background: #f1f1ff;
+  transform: translateY(-1px);
 }
 
 .btn-remove {
   position: absolute;
-  top: 50px;
-  right: 9px;
-  min-width: 59px;
-  height: 27px;
-  padding: 2px 7px;
-  border: 1px solid #e29a9a;
-  background: #fff6f6;
-  color: #c34949;
+  top: 52px;
+  right: 11px;
+  min-width: 68px;
+  height: 29px;
+  padding: 3px 9px;
+  border: 1px solid #f0cfd3;
+  border-radius: 8px;
+  background: #fff7f8;
+  color: #d54c5c;
   font-family: inherit;
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 .btn-remove:hover {
-  background: #ffe7e7;
+  border-color: #eeb6bd;
+  background: #ffedef;
 }
 
 @media (max-width: 480px) {
   .weather-card {
-    padding-right: 72px;
+    padding-right: 88px;
   }
 }
 </style>

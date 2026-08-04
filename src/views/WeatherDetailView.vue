@@ -72,33 +72,35 @@ watch(
 
 <style scoped>
 .detail-view {
-  padding: 0 16px 18px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgb(24 59 91 / 6%);
+  padding: 20px;
+  border: 1px solid #e2e6ef;
+  border-radius: 15px;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 8px 24px rgb(24 37 63 / 6%);
 }
 
 h2 {
-  margin: 0 -14px 14px;
-  padding: 0 2px 10px;
-  border-bottom: 1px solid #dce3e9;
-  color: #315675;
-  font-size: 16px;
-  font-weight: 600;
+  margin: 0 0 14px;
+  padding: 0 2px 12px;
+  border-bottom: 1px solid #e3e7ef;
+  color: #2c3b52;
+  font-size: 17px;
+  font-weight: 850;
 }
 
 .detail-card,
 .missing-city {
   margin-bottom: 14px;
   padding: 14px;
-  border-radius: 6px;
-  background: #f1f3f6;
+  border: 1px solid #e5e8f0;
+  border-radius: 11px;
+  background: #f7f8fc;
 }
 
 p {
   margin: 0;
-  color: #315675;
-  font-size: 13px;
+  color: #52627a;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -108,17 +110,18 @@ p {
 
 button {
   padding: 8px 12px;
-  border: 0;
-  border-radius: 3px;
-  background: #233f54;
+  border: 1px solid #3e4d64;
+  border-radius: 9px;
+  background: #34435a;
   color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 button:hover,
 button:focus-visible {
-  background: #152c3d;
+  background: #27354a;
+  transform: translateY(-1px);
 }
 </style>

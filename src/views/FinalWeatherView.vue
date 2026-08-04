@@ -256,25 +256,42 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
 }
 
 .final-heading {
+  position: relative;
   display: flex;
+  overflow: hidden;
   align-items: flex-end;
   justify-content: space-between;
   gap: 18px;
-  margin-bottom: 18px;
-  padding: 22px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #143e5d, #087fb4);
+  margin-bottom: 16px;
+  padding: 28px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 86% 18%, rgb(119 225 255 / 26%), transparent 30%),
+    linear-gradient(135deg, #30347c 0%, #436ac2 56%, #16a5c0 100%);
   color: #fff;
-  box-shadow: 0 8px 22px rgb(13 76 111 / 18%);
+  box-shadow: 0 18px 42px rgb(49 65 139 / 24%);
+}
+
+.final-heading::after {
+  position: absolute;
+  right: -45px;
+  bottom: -70px;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
 }
 
 .eyebrow {
   display: block;
   margin-bottom: 4px;
-  color: #aee6fb;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  color: #bfeeff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
@@ -284,38 +301,44 @@ h1,
 }
 
 h1 {
-  font-size: 25px;
-  font-weight: 800;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
   line-height: 1.35;
 }
 
 .final-heading p {
-  margin-top: 5px;
-  color: #d8f0fa;
-  font-size: 13px;
+  margin-top: 7px;
+  color: #dbefff;
+  font-size: 12px;
 }
 
 .final-heading :deep(.unit-toggler) {
-  padding: 9px 10px;
-  border-radius: 7px;
-  background: rgb(255 255 255 / 94%);
+  position: relative;
+  z-index: 1;
+  padding: 10px 12px;
+  border: 1px solid rgb(255 255 255 / 48%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 8px 20px rgb(20 35 82 / 15%);
 }
 
 .api-state {
-  margin-bottom: 14px;
-  padding: 9px 12px;
-  border: 1px solid #bee5ce;
-  border-radius: 7px;
-  background: #eaf8ef;
-  color: #197144;
-  font-size: 12px;
-  font-weight: 650;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px solid #ccebdd;
+  border-radius: 11px;
+  background: #effaf5;
+  color: #187650;
+  box-shadow: 0 4px 14px rgb(21 154 104 / 5%);
+  font-size: 11px;
+  font-weight: 750;
 }
 
 .api-state.error {
-  border-color: #f2c8c8;
-  background: #fff0f0;
-  color: #ad3c3c;
+  border-color: #f3cdd2;
+  background: #fff2f3;
+  color: #bd4655;
 }
 
 .api-state button {
@@ -329,9 +352,9 @@ h1 {
 }
 
 .search-results {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid #dfe6eb;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e6e9f1;
 }
 
 .search-results-heading {
@@ -353,11 +376,12 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 6px;
-  padding: 9px 10px;
-  border: 1px solid #dce5eb;
-  border-radius: 6px;
-  background: #fff;
+  margin-top: 8px;
+  padding: 12px 13px;
+  border: 1px solid #e2e6ef;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff, #fafbff);
+  box-shadow: 0 4px 14px rgb(24 37 63 / 4%);
 }
 
 .search-result span,
@@ -379,14 +403,15 @@ h1 {
 
 .search-result button {
   flex: 0 0 auto;
-  padding: 6px 9px;
-  border: 1px solid #1888bc;
-  border-radius: 5px;
-  background: #159bd7;
+  padding: 7px 10px;
+  border: 1px solid #5556d3;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6667e2, #5051cc);
   color: #fff;
   font: inherit;
-  font-size: 11px;
-  font-weight: 700;
+  box-shadow: 0 4px 10px rgb(80 81 204 / 16%);
+  font-size: 10px;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -404,13 +429,15 @@ h1 {
 }
 
 .search-result .detail-button {
-  border-color: #637c8d;
+  border-color: #d4d9e5;
   background: #fff;
-  color: #36566d;
+  box-shadow: none;
+  color: #4d5b70;
 }
 
 .search-result .detail-button:hover {
-  background: #eef3f6;
+  border-color: #c6c8ed;
+  background: #f2f2ff;
 }
 
 .empty-message {
@@ -426,12 +453,13 @@ h1 {
 
 .status-bar {
   margin: 2px 0 0;
-  padding: 9px 12px;
-  border-radius: 6px;
-  background: #e2f5e6;
-  color: #168943;
-  font-size: 13px;
-  font-weight: 700;
+  padding: 10px 13px;
+  border: 1px solid #d2ebdd;
+  border-radius: 11px;
+  background: #eef9f3;
+  color: #188256;
+  font-size: 11px;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -439,6 +467,7 @@ h1 {
   .final-heading {
     align-items: flex-start;
     flex-direction: column;
+    padding: 23px 20px;
   }
 
   h1 {

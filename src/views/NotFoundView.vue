@@ -24,10 +24,10 @@ const router = useRouter()
 .not-found {
   min-height: 395px;
   padding: 68px 28px 50px;
-  border: 1px solid #e0e4e7;
-  border-radius: 13px;
-  background: #fff;
-  box-shadow: 0 5px 12px rgb(25 46 64 / 17%);
+  border: 1px solid #e1e5ee;
+  border-radius: 22px;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 16px 40px rgb(24 37 63 / 10%);
   text-align: center;
 }
 
@@ -40,7 +40,7 @@ const router = useRouter()
 
 h2 {
   margin: 0 0 18px;
-  color: #203c51;
+  color: #28374e;
   font-size: 25px;
   font-weight: 800;
 }
@@ -54,18 +54,20 @@ p {
 
 button {
   padding: 11px 25px;
-  border: 0;
-  border-radius: 22px;
-  background: #078af2;
+  border: 1px solid #5051ca;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #6869e3, #5051ca);
   color: #fff;
-  font-size: 14px;
-  font-weight: 700;
+  box-shadow: 0 7px 16px rgb(80 81 202 / 20%);
+  font-size: 12px;
+  font-weight: 850;
   cursor: pointer;
 }
 
 button:hover,
 button:focus-visible {
-  background: #0675ce;
+  background: linear-gradient(135deg, #5d5ed8, #4445b8);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 480px) {

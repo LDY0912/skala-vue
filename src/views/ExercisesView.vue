@@ -57,14 +57,19 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
 .exercises-layout {
   display: flex;
   flex-direction: column;
-  gap: 42px;
+  gap: 32px;
 }
 
 .collection-heading {
-  padding: 18px 20px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #173f5f, #087fb4);
+  position: relative;
+  overflow: hidden;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 10%, rgb(108 228 255 / 22%), transparent 30%),
+    linear-gradient(135deg, #313577, #496fc7 60%, #17a3bd);
   color: #fff;
+  box-shadow: 0 16px 38px rgb(46 64 134 / 20%);
 }
 
 .collection-heading p,
@@ -74,13 +79,15 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
 
 .collection-heading p {
   margin-bottom: 2px;
-  color: #c8eaf8;
-  font-size: 12px;
+  color: #cceeff;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .collection-heading h1 {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
 }
 
 .router-exercise,
@@ -90,11 +97,11 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
 
 .exercise-header > h1 {
   margin: 0;
-  padding: 0 4px 12px;
-  border-bottom: 1px solid #dce3e9;
-  color: #183b5b;
-  font-size: 22px;
-  font-weight: 750;
+  padding: 0 4px 13px;
+  border-bottom: 1px solid #e1e5ed;
+  color: #27364d;
+  font-size: 21px;
+  font-weight: 850;
   line-height: 1.4;
 }
 
@@ -103,11 +110,12 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin: 20px 0 18px;
-  padding: 14px 12px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgb(24 59 91 / 8%);
+  margin: 16px 0;
+  padding: 11px 13px;
+  border: 1px solid #e3e7ef;
+  border-radius: 13px;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 7px 20px rgb(24 37 63 / 6%);
 }
 
 .navigation-bar--center {
@@ -128,19 +136,19 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
 }
 
 .exercise-header nav a {
-  padding: 0 3px 5px;
-  border-bottom: 2px solid transparent;
-  color: #75828c;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: #6f7c8e;
+  font-size: 12px;
+  font-weight: 750;
   line-height: 1.4;
   text-decoration: none;
 }
 
 .exercise-header nav a:hover,
 .exercise-header nav a.router-link-exact-active {
-  border-bottom-color: #08a4ee;
-  color: #08a4ee;
+  color: #4f50c8;
+  background: #efefff;
 }
 
 @media (max-width: 520px) {

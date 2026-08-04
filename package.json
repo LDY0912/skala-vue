@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fetch:valorant": "node --env-file-if-exists=.env.local scripts/fetch-valorant-schedule.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "run-s \"lint:*\"",

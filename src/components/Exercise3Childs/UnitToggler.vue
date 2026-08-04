@@ -22,25 +22,28 @@ const { toggleUnit } = configStore
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  color: #315675;
-  font-size: 13px;
+  gap: 9px;
+  color: #53627a;
+  font-size: 11px;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 button {
-  padding: 6px 9px;
-  border: 0;
-  border-radius: 4px;
-  background: #315675;
+  padding: 7px 11px;
+  border: 1px solid #4e4fcd;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #6768e5, #5051cc);
   color: #fff;
-  font-size: 12px;
-  font-weight: 700;
+  box-shadow: 0 5px 12px rgb(80 81 204 / 18%);
+  font-size: 10px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 button:hover,
 button:focus-visible {
-  background: #203e57;
+  background: linear-gradient(135deg, #5d5ed9, #4344ba);
+  transform: translateY(-1px);
 }
 </style>

@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 */2 * * *'
 
 permissions:
   contents: read
@@ -19,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VITE_OPENWEATHER_API_KEY: ${{ secrets.VITE_OPENWEATHER_API_KEY }}
+      PANDASCORE_API_TOKEN: ${{ secrets.PANDASCORE_API_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,6 +37,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Fetch Valorant schedule
+        run: npm run fetch:valorant
 
       - name: Build
         run: npm run build

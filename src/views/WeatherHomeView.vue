@@ -101,11 +101,12 @@ function showDetail(cityId) {
 .status-bar {
   margin: 2px 0 0;
   padding: 9px 12px;
-  border-radius: 6px;
-  background: #e2f5e6;
-  color: #168943;
-  font-size: 13px;
-  font-weight: 700;
+  border: 1px solid #d2ebdd;
+  border-radius: 10px;
+  background: #eef9f3;
+  color: #188256;
+  font-size: 11px;
+  font-weight: 800;
   text-align: center;
 }
 </style>
