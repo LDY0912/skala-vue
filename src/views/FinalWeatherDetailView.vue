@@ -1,9 +1,10 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { computed, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import FiveDayForecast from '../components/weather/FiveDayForecast.vue'
 import UnitToggler from '../components/weather/UnitToggler.vue'
+import WeatherTransitionOverlay from '../components/weather/WeatherTransitionOverlay.vue'
 import { findGlobalWeatherById } from '../data/weatherLocations.js'
 import {
   fetchCurrentWeather,
@@ -29,6 +30,8 @@ const forecastItems = ref([])
 const forecastTimezoneOffset = ref(0)
 const isForecastLoading = ref(false)
 const forecastError = ref('')
+const isIntroEffectVisible = ref(false)
+let introEffectTimer
 
 const weatherScene = computed(() => {
   const code = city.value?.weatherCode
@@ -92,6 +95,16 @@ function formatLocalTime(timestamp, includeDate = false) {
   }).format(localTimestamp)
 }
 
+function showIntroEffect() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+  window.clearTimeout(introEffectTimer)
+  isIntroEffectVisible.value = true
+  introEffectTimer = window.setTimeout(() => {
+    isIntroEffectVisible.value = false
+  }, 1400)
+}
+
 async function loadWeather() {
   const selectedCity = findGlobalWeatherById(props.cityId)
   if (!selectedCity) return
@@ -109,6 +122,7 @@ async function loadWeather() {
 
   if (currentResult.status === 'fulfilled') {
     city.value = currentResult.value
+    showIntroEffect()
   } else {
     apiError.value = getWeatherErrorMessage(currentResult.reason)
   }
@@ -125,6 +139,7 @@ async function loadWeather() {
 }
 
 onMounted(loadWeather)
+onBeforeUnmount(() => window.clearTimeout(introEffectTimer))
 </script>
 
 <template>
@@ -151,6 +166,14 @@ onMounted(loadWeather)
       </div>
       <div class="lightning-bolt"></div>
     </div>
+
+    <WeatherTransitionOverlay
+      class="detail-intro-effect"
+      :active="isIntroEffectVisible"
+      :city-name="city?.name"
+      :weather-code="city?.weatherCode"
+      :status="city?.status"
+    />
 
     <header class="detail-header">
       <div>
@@ -293,6 +316,12 @@ onMounted(loadWeather)
 .final-detail > :not(.weather-atmosphere) {
   position: relative;
   z-index: 2;
+}
+
+.final-detail > .detail-intro-effect {
+  position: absolute;
+  z-index: 20;
+  inset: 0;
 }
 
 .weather-atmosphere {
