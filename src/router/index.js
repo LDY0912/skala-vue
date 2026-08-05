@@ -35,6 +35,12 @@ const router = createRouter({
       meta: { wide: true },
     },
     {
+      path: '/storm-game',
+      name: 'storm-game',
+      component: () => import('../views/WeatherLightningGameView.vue'),
+      meta: { wide: true },
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('../views/NotFoundView.vue'),
