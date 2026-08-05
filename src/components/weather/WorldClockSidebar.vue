@@ -78,10 +78,10 @@ function getLocalHour(timeZone) {
 function getTimeMood(timeZone) {
   const hour = getLocalHour(timeZone)
 
-  if (hour >= 5 && hour < 11) return { icon: '🌤️', label: '아침' }
-  if (hour >= 11 && hour < 17) return { icon: '☀️', label: '낮' }
-  if (hour >= 17 && hour < 20) return { icon: '🌇', label: '저녁' }
-  return { icon: '🌙', label: '밤' }
+  if (hour >= 5 && hour < 11) return { icon: '', label: '아침' }
+  if (hour >= 11 && hour < 17) return { icon: '', label: '낮' }
+  if (hour >= 17 && hour < 20) return { icon: '', label: '저녁' }
+  return { icon: '', label: '밤' }
 }
 
 onMounted(() => {
