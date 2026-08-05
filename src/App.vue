@@ -23,6 +23,9 @@ const route = useRoute()
         <RouterLink to="/valorant">
           <span><strong>발로란트</strong><small>대회 일정</small></span>
         </RouterLink>
+        <RouterLink to="/escape-room">
+          <span><strong>방탈출</strong><small>테마 찾기</small></span>
+        </RouterLink>
         <RouterLink to="/exercises">
           <span><strong>과제 1–5</strong><small>Vue 실습</small></span>
         </RouterLink>
@@ -241,7 +244,7 @@ body {
 
   .site-header nav {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 4px;
   }
 

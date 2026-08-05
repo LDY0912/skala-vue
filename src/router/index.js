@@ -95,6 +95,12 @@ const router = createRouter({
       meta: { wide: true },
     },
     {
+      path: '/escape-room',
+      name: 'escape-room',
+      component: () => import('../views/EscapeRoomView.vue'),
+      meta: { wide: true },
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('../views/NotFoundView.vue'),

@@ -1,0 +1,1836 @@
+{
+  "updatedAt": "2026-08-05",
+  "sourceUrl": "https://bangtalpick.co.kr/themes.html",
+  "notice": "공개된 테마 정보를 기준으로 구성했습니다. 운영 여부와 가격, 예약 가능 시간은 각 공식 홈페이지에서 최종 확인해 주세요.",
+  "regions": [
+    {
+      "id": "gangnam",
+      "name": "강남",
+      "caption": "지점 10개",
+      "branches": [
+        {
+          "id": "dc420be57b",
+          "brand": "KEYESCAPE",
+          "name": "키이스케이프 강남점",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "http://www.keyescape.com/web/home.php",
+          "themes": [
+            {
+              "id": "168d293b987a",
+              "title": "그카지말라캤자나",
+              "genre": "코미디",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.3,
+              "price": 25000,
+              "rating": 4.17,
+              "description": "김모씨(전직 프로악플러) 한때, 제 아이디만 봐도 모르는 사람이 없을 정도로 여기저기 악플을 달 고 다녔어요. 그런데 그날...다시는 생각하고 싶지 않지만 아직도 생생하게…",
+              "imageUrl": "images/escape-room-seoul/168d293b987a.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B0%95%EB%82%A8%EC%A0%90&name=%EA%B7%B8%EC%B9%B4%EC%A7%80%EB%A7%90%EB%9D%BC%EC%BA%A4%EC%9E%90%EB%82%98"
+            },
+            {
+              "id": "d16e9bb782f8",
+              "title": "살랑살랑 연구소",
+              "genre": "감성",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 24000,
+              "rating": 3.86,
+              "description": "사랑만 하기에도 부족한 세상. 지금, 당신은 사랑을 하고 있나요? 세상에는 정말 많은 종류의 사랑이 있죠. 연인과의 사랑, 부모와 자식간의 사랑, 형제자매의 사랑,…",
+              "imageUrl": "images/escape-room-seoul/d16e9bb782f8.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B0%95%EB%82%A8%EC%A0%90&name=%EC%82%B4%EB%9E%91%EC%82%B4%EB%9E%91+%EC%97%B0%EA%B5%AC%EC%86%8C"
+            },
+            {
+              "id": "07627e6d9064",
+              "title": "월야애담",
+              "genre": "로맨스",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 24000,
+              "rating": 3.92,
+              "description": "돌쇠야. 나 덕유라네. 소식들었는가. 오늘 우리 아버님이 나를 불러서 말씀하시길 돌쇠 네가 모시는 최대감님댁 아씨 복녀와 정혼을 하기로 정해졌다는구 나 너도 잘…",
+              "imageUrl": "images/escape-room-seoul/07627e6d9064.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B0%95%EB%82%A8%EC%A0%90&name=%EC%9B%94%EC%95%BC%EC%95%A0%EB%8B%B4"
+            }
+          ]
+        },
+        {
+          "id": "9a2c9cacb0",
+          "brand": "KEYESCAPE",
+          "name": "키이스케이프 더오름",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://keyescape.com/",
+          "themes": [
+            {
+              "id": "ae0284b2ef86",
+              "title": "네드",
+              "genre": "기타",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0.4,
+              "price": 28000,
+              "rating": 4.59,
+              "description": "“친구의 부탁을 나 몰라라 할 순 없지!” 마을에서 말썽꾸러기로 유명한 네드. 어느 날, 그런 네드에게 새벽에 걸려온 친구의 전화. 전화기 너머에서는 친구…",
+              "imageUrl": "images/escape-room-seoul/ae0284b2ef86.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%8D%94%EC%98%A4%EB%A6%84&name=%EB%84%A4%EB%93%9C"
+            },
+            {
+              "id": "435fa00d68b1",
+              "title": "엔제리오",
+              "genre": "기타",
+              "difficulty": 4,
+              "duration": "70분",
+              "scare": 0.3,
+              "price": 27000,
+              "rating": 4.25,
+              "description": "해당테마의 시놉시스는 매장에서 확인가능합니다.",
+              "imageUrl": "images/escape-room-seoul/435fa00d68b1.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%8D%94%EC%98%A4%EB%A6%84&name=%EC%97%94%EC%A0%9C%EB%A6%AC%EC%98%A4"
+            }
+          ]
+        },
+        {
+          "id": "aed44f6002",
+          "brand": "KEYESCAPE",
+          "name": "키이스케이프 메모리컴퍼니",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://keyescape.com/reservation.php",
+          "themes": [
+            {
+              "id": "8dea0bd4fcbe",
+              "title": "FILM BY BOB",
+              "genre": "드라마",
+              "difficulty": 3,
+              "duration": "75분",
+              "scare": 0.2,
+              "price": 35000,
+              "rating": 4.88,
+              "description": "ºName_Bob Coulson ºAge_31 years old ºGender_Male ºDepartment_Cleaner º직원정보 청소부. 아직 변경된 근로계약서에 서명 안 했음. 금일 출근하면 근로 계약서 작성해야 함. º밥의…",
+              "imageUrl": "images/escape-room-seoul/8dea0bd4fcbe.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%BB%B4%ED%8D%BC%EB%8B%88&name=FILM+BY+BOB"
+            },
+            {
+              "id": "96e86a62ec6b",
+              "title": "FILM BY EDDY",
+              "genre": "드라마",
+              "difficulty": 3,
+              "duration": "75분",
+              "scare": 0.2,
+              "price": 33000,
+              "rating": 4.83,
+              "description": "￮Name_ Eddy Raymond ￮Age_ 25 years old ￮Gender_ Male ￮Occupation_ - ￮특이사항 1) 취업준비기간 : 4년 3개월 2) 취업하고 싶은 곳 :…",
+              "imageUrl": "images/escape-room-seoul/96e86a62ec6b.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%BB%B4%ED%8D%BC%EB%8B%88&name=FILM+BY+EDDY"
+            },
+            {
+              "id": "07a5d6b96836",
+              "title": "FILM BY STEVE",
+              "genre": "잠입",
+              "difficulty": 3.5,
+              "duration": "80분",
+              "scare": 0.3,
+              "price": 34000,
+              "rating": 4.84,
+              "description": "ºName_Steve Cooper ºAge_29 years old ºGender_Male ºCustomer classification_Tour Program Applicants º투어 프로그램 예약 정보 1) 방문 예정 인원 : 신청자 스티브 본인…",
+              "imageUrl": "images/escape-room-seoul/07a5d6b96836.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%BB%B4%ED%8D%BC%EB%8B%88&name=FILM+BY+STEVE"
+            }
+          ]
+        },
+        {
+          "id": "c1a55f8fd5",
+          "brand": "KEYESCAPE",
+          "name": "키이스케이프 스테이션",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://keyescape.com/reservation.php",
+          "themes": [
+            {
+              "id": "e2edb42bb906",
+              "title": "내 방",
+              "genre": "코믹",
+              "difficulty": 3.5,
+              "duration": "65분",
+              "scare": 0.5,
+              "price": 30000,
+              "rating": 4.75,
+              "description": "\"대학을 나와도 취업을 못하는 사회, 졸업장만 따놓고….\" \"사회 나오자마자 학자금 대출로 인한 빚만 가득한 상태에서 취업이 되지 않는….\" 내 얘기다. (뉴스) \"일확천금이라는…",
+              "imageUrl": "images/escape-room-seoul/e2edb42bb906.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%85%98&name=%EB%82%B4+%EB%B0%A9"
+            },
+            {
+              "id": "7762dc08c339",
+              "title": "머니머니부동산",
+              "genre": "기타",
+              "difficulty": 3.5,
+              "duration": "80분",
+              "scare": 0.8,
+              "price": 34000,
+              "rating": 4.79,
+              "description": "안녕하세요, 어른이 여러분. 오랜만에 우리 어른이 여러분들을 위해서 새로운 주제를 들고 왔는데, 뭘까~요? 짜잔! 바로바로 키이스케이프 시에서 야심차게 출시한 시즌 2, '머니머니…",
+              "imageUrl": "images/escape-room-seoul/7762dc08c339.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%85%98&name=%EB%A8%B8%EB%8B%88%EB%A8%B8%EB%8B%88%EB%B6%80%EB%8F%99%EC%82%B0"
+            },
+            {
+              "id": "159512cdc07f",
+              "title": "NOSTALGIA VISTA",
+              "genre": "미스터리",
+              "difficulty": 3,
+              "duration": "65분",
+              "scare": 0,
+              "price": 31000,
+              "rating": 4.59,
+              "description": "https://nostalgiavista.com \"The best moment of your life is waiting for you.\" 환영합니다. 이곳은 당신이 마음속 깊이 원하던 그곳, 노스텔지아 비스타입니다.",
+              "imageUrl": "images/escape-room-seoul/159512cdc07f.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%85%98&name=NOSTALGIA+VISTA"
+            }
+          ]
+        },
+        {
+          "id": "8cef5da086",
+          "brand": "후즈데어",
+          "name": "후즈데어",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://keyescape.com/reservation1.php?zizum_num=23",
+          "themes": [
+            {
+              "id": "1234ae7d3f5a",
+              "title": "괴록",
+              "genre": "미스터리",
+              "difficulty": 1.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 35000,
+              "rating": 4.66,
+              "description": "※ 해당 테마는 최대 4인까지 이용가능합니다. [Last Candle, 괴록] 「SunnyChild 방송국, 인기 프로그램 ‘치치는 내 친구’ 로 시청률 1위 기록」 … 「‘치치는…",
+              "imageUrl": "images/escape-room-seoul/1234ae7d3f5a.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%9B%84%EC%A6%88%EB%8D%B0%EC%96%B4&name=%EA%B4%B4%EB%A1%9D"
+            },
+            {
+              "id": "e7c6ffd21482",
+              "title": "투투 어드벤쳐",
+              "genre": "공포",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 35000,
+              "rating": 4.73,
+              "description": "반짝이는 상상력과 환상이 가득한 이곳, 써니차일드랜드와 함께할 당신을 기다립니다. /주 업무/ -어트랙션 내부 청소 -비상 상황 시 신속한 안내 및 제지 -분실물품…",
+              "imageUrl": "images/escape-room-seoul/e7c6ffd21482.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%9B%84%EC%A6%88%EB%8D%B0%EC%96%B4&name=%ED%88%AC%ED%88%AC+%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B3%90"
+            },
+            {
+              "id": "c76ca4dc8745",
+              "title": "AYAKO",
+              "genre": "스릴러",
+              "difficulty": 1.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 35000,
+              "rating": 4.79,
+              "description": "나비의 꿈 / 깊은 물속에 잠기고 / 떠날 때까지 蝶の夢 / 深い水の中で眠り / 去るまで。 [About Candle] 1) 난이도 : 3 2) 서늘함…",
+              "imageUrl": "images/escape-room-seoul/c76ca4dc8745.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%9B%84%EC%A6%88%EB%8D%B0%EC%96%B4&name=AYAKO"
+            }
+          ]
+        },
+        {
+          "id": "5a9ff65596",
+          "brand": "무비무드 강남점",
+          "name": "무비무드 강남점",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://www.keyescape.com/movie_mood.php",
+          "themes": [
+            {
+              "id": "de3cbac91069",
+              "title": "5관 E열 4번",
+              "genre": "미스터리",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0.7,
+              "price": 16000,
+              "rating": 4.56,
+              "description": "(주인공) - 제가 이 낡은 극장을 좋아하게 된 계기요? 음... 글쎄요. - 가끔 영화보다 더 영화같은 일이 벌어질 때가 있거든요. - 이를테면...",
+              "imageUrl": "images/escape-room-seoul/de3cbac91069.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=5%EA%B4%80+E%EC%97%B4+4%EB%B2%88"
+            },
+            {
+              "id": "e369068b8490",
+              "title": "시아와세 환전소",
+              "genre": "감성",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0,
+              "price": 16000,
+              "rating": 4.57,
+              "description": "요즘따라 유난히 불운이 겹쳤다. 망가진 핸드폰, 놓쳐버린 지하철, 뜻대로 되지 않는 하루들. '이 정도면... 내 행운을 누군가 훔쳐간 것 아니야?' 그런 의심이…",
+              "imageUrl": "images/escape-room-seoul/e369068b8490.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=%EC%8B%9C%EC%95%84%EC%99%80%EC%84%B8+%ED%99%98%EC%A0%84%EC%86%8C"
+            },
+            {
+              "id": "8fbfcdde1138",
+              "title": "AFTERLIFE AIRLINES",
+              "genre": "미스터리",
+              "difficulty": 0.5,
+              "duration": "60분",
+              "scare": 0,
+              "price": 16000,
+              "rating": 4.26,
+              "description": "눈을 뜨자, 나는 낯선 공항 한가운데에 서 있었다.",
+              "imageUrl": "images/escape-room-seoul/8fbfcdde1138.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=AFTERLIFE+AIRLINES"
+            },
+            {
+              "id": "fed1c34217de",
+              "title": "Cat's lock",
+              "genre": "코미디",
+              "difficulty": 0.5,
+              "duration": "60분",
+              "scare": 0,
+              "price": 16000,
+              "rating": 4.39,
+              "description": "^,,,,,^ (' ㅅ ' ) -U-U----------------- I 뭐, 어쩌라고 I I__________________I",
+              "imageUrl": "images/escape-room-seoul/fed1c34217de.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=Cat%27s+lock"
+            },
+            {
+              "id": "67553419c67b",
+              "title": "Have a good tape, Dave",
+              "genre": "드라마",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0,
+              "price": 16000,
+              "rating": 4.63,
+              "description": "누군가에게 어떤 기억은 지우고 싶은 순간이지만, 또 어떤 기억은 오늘을 버틸 수 있게 해주는 힘이 되기도 합니다. 그건 여기, 메모리컴퍼니 고객만족팀의 데이브에게도…",
+              "imageUrl": "images/escape-room-seoul/67553419c67b.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=Have+a+good+tape%2C+Dave"
+            },
+            {
+              "id": "df6d60bc7d7a",
+              "title": "Once Oven a Time",
+              "genre": "감성",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 16000,
+              "rating": 4.29,
+              "description": "완벽하지 않아도 괜찮아요! 조금 탈 수도 있고, 재료가 부족할수도 있지만, 그것마저도 당신만의 레시피가 되는걸요. 자, 이제 앞치마를 두르고 당신만의 요리를 시작해볼까요?",
+              "imageUrl": "images/escape-room-seoul/df6d60bc7d7a.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%AC%B4%EB%B9%84%EB%AC%B4%EB%93%9C+%EA%B0%95%EB%82%A8%EC%A0%90&name=Once+Oven+a+Time"
+            }
+          ]
+        },
+        {
+          "id": "f774396f5d",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 강남 던전",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=2",
+          "themes": [
+            {
+              "id": "da0d401d5eee",
+              "title": "강남목욕탕",
+              "genre": "코미디",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 26000,
+              "rating": 4.47,
+              "description": "“한 번 들어갔다 나오면 무조건 100% 피로가 회복되는 1인 강남목욕탕” 중요한 경기를 앞두고 완벽한 컨디션 관리를 위해서 강남목욕탕에 방문했는데, 아뿔사! 오늘이 강남목욕탕…",
+              "imageUrl": "images/escape-room-seoul/da0d401d5eee.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%84&name=%EA%B0%95%EB%82%A8%EB%AA%A9%EC%9A%95%ED%83%95"
+            },
+            {
+              "id": "421c21c5259b",
+              "title": "대호시장 살인사건",
+              "genre": "추리",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 1,
+              "price": 26000,
+              "rating": 4.47,
+              "description": "대호 시장에 위치한 집에서 한 남자의 사체가 발견된다. 사인은 손목의 상처로 인한 과다출혈이었고, 사체의 곁에서 유서가 발견되었기에 자살이라 보였다. 하지만 이 사건이…",
+              "imageUrl": "images/escape-room-seoul/421c21c5259b.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%84&name=%EB%8C%80%ED%98%B8%EC%8B%9C%EC%9E%A5+%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4"
+            },
+            {
+              "id": "353a7090d6d8",
+              "title": "마음을 그려드립니다",
+              "genre": "드라마",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 26000,
+              "rating": 4.08,
+              "description": "감정의 색을 모아 당신의 마음을 그려드립니다.",
+              "imageUrl": "images/escape-room-seoul/353a7090d6d8.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%84&name=%EB%A7%88%EC%9D%8C%EC%9D%84+%EA%B7%B8%EB%A0%A4%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4"
+            },
+            {
+              "id": "32019589cb2f",
+              "title": "LOST KINGDOM : 잊혀진 전설",
+              "genre": "모험",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.4,
+              "price": 26000,
+              "rating": 4.1,
+              "description": "전설 속의 왕국, 아틀란티스는 과연 존재하는가? 가문 대대로 아틀란티스에 관한 고고학 연구를 지속하고 있는 키스콥 가문의 고고학자인 당신은 어느 날 발신인을 알…",
+              "imageUrl": "images/escape-room-seoul/32019589cb2f.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%84&name=LOST+KINGDOM+%3A+%EC%9E%8A%ED%98%80%EC%A7%84+%EC%A0%84%EC%84%A4"
+            }
+          ]
+        },
+        {
+          "id": "3d5d734c15",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 강남 던전2",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=4",
+          "themes": [
+            {
+              "id": "c426f698b680",
+              "title": "LOST KINGDOM2 : 대탐험의 시작",
+              "genre": "모험",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0.5,
+              "price": 29000,
+              "rating": 4.42,
+              "description": "지난번 모험에서 발견한 아틀란티스의 유물은 나를 미지의 섬으로 향하게 만들었다. 섬에 상륙하여 주변을 둘러보고 있던 중, 어디선가 무장한 사람들이 나타나 알 수…",
+              "imageUrl": "images/escape-room-seoul/c426f698b680.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%842&name=LOST+KINGDOM2+%3A+%EB%8C%80%ED%83%90%ED%97%98%EC%9D%98+%EC%8B%9C%EC%9E%91"
+            },
+            {
+              "id": "efe8f7d9586a",
+              "title": "MAYDAY",
+              "genre": "SF",
+              "difficulty": 3.5,
+              "duration": "65분",
+              "scare": 1.1,
+              "price": 28000,
+              "rating": 4.5,
+              "description": "당신과 HOWARD는 어렸을 때부터 우주탐사를 꿈꾸며 성장했고, 둘은 마침내 우주연구원이 되어 꿈을 이룬다. 이번 우주탐사대에 뽑힌 당신은 탐사를 마치고 지구로 복귀하려 하는데...",
+              "imageUrl": "images/escape-room-seoul/efe8f7d9586a.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EA%B0%95%EB%82%A8+%EB%8D%98%EC%A0%842&name=MAYDAY"
+            }
+          ]
+        },
+        {
+          "id": "b85288faa7",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 던전루나",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=6",
+          "themes": [
+            {
+              "id": "e9577f90a207",
+              "title": "3일",
+              "genre": "추리",
+              "difficulty": 4.5,
+              "duration": "75분",
+              "scare": 0.6,
+              "price": 29000,
+              "rating": 4.22,
+              "description": "하루 6시간만 깨어있을 수 있는 세상! SEED 한 알이면 당신의 시간은 멈추지 않습니다! * 해당 테마는 예약 시간 15분 전에 방문해주셔야 하며,…",
+              "imageUrl": "images/escape-room-seoul/e9577f90a207.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84%EB%A3%A8%EB%82%98&name=3%EC%9D%BC"
+            },
+            {
+              "id": "fe323da2827e",
+              "title": "검은 운명의 밤",
+              "genre": "판타지",
+              "difficulty": 3,
+              "duration": "65분",
+              "scare": 0.9,
+              "price": 28000,
+              "rating": 4.46,
+              "description": "어둠을 잠식하는 붉은 달과 긴 잠에서 깨어나는 푸른 눈. 오늘, 운명의 수레바퀴가 돌아간다.",
+              "imageUrl": "images/escape-room-seoul/fe323da2827e.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84%EB%A3%A8%EB%82%98&name=%EA%B2%80%EC%9D%80+%EC%9A%B4%EB%AA%85%EC%9D%98+%EB%B0%A4"
+            }
+          ]
+        },
+        {
+          "id": "e97b714165",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 던전스텔라",
+          "area": "강남",
+          "address": "서울 강남 일대",
+          "reservationUrl": "https://xdungeon.net/",
+          "themes": [
+            {
+              "id": "c8749fcb7ee3",
+              "title": "데스티니 앤드 타로",
+              "genre": "판타지",
+              "difficulty": 4,
+              "duration": "75분",
+              "scare": 0.1,
+              "price": 29000,
+              "rating": 4.6,
+              "description": "항상 실패만 겪었던 불운의 아이콘 시리. 시리는 하는 일 마다 잘 되지 않는 운명을 점치기 위해 타로 집에 예약하고 방문하게 됩니다. *…",
+              "imageUrl": "images/escape-room-seoul/c8749fcb7ee3.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84%EC%8A%A4%ED%85%94%EB%9D%BC&name=%EB%8D%B0%EC%8A%A4%ED%8B%B0%EB%8B%88+%EC%95%A4%EB%93%9C+%ED%83%80%EB%A1%9C"
+            },
+            {
+              "id": "0800f97e4a85",
+              "title": "響 : 향",
+              "genre": "공포",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 29000,
+              "rating": 4.66,
+              "description": "2008년 2월 28일 오후 11:30 이 시간에 갑작스레 향음역에서 서류를 가져오라는 역장님의 지시를 받았다. …4년 전, 내 동생이 근무했던 곳이다.",
+              "imageUrl": "images/escape-room-seoul/0800f97e4a85.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84%EC%8A%A4%ED%85%94%EB%9D%BC&name=%E9%9F%BF+%3A+%ED%96%A5"
+            },
+            {
+              "id": "1023504b1c3f",
+              "title": "TIENTANG CITY",
+              "genre": "잠입",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0.7,
+              "price": 30000,
+              "rating": 4.54,
+              "description": "MIDAS 님, 티엔탕시티에 접속하시겠습니까?",
+              "imageUrl": "images/escape-room-seoul/1023504b1c3f.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84%EC%8A%A4%ED%85%94%EB%9D%BC&name=TIENTANG+CITY"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hongdae",
+      "name": "홍대",
+      "caption": "지점 10개",
+      "branches": [
+        {
+          "id": "afaa00329f",
+          "brand": "KEYESCAPE",
+          "name": "키이스케이프 홍대점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://keyescape.com/",
+          "themes": [
+            {
+              "id": "d81d8d0c2794",
+              "title": "고백",
+              "genre": "기타",
+              "difficulty": 4.5,
+              "duration": "85분",
+              "scare": 0.2,
+              "price": 29000,
+              "rating": 4.13,
+              "description": "아직도 기억나. 널 처음봤던 그 순간. 가만히 서 있는 뒷모습조차 너무나 귀여웠어. 한눈에 알아차렸지. 우린 너무나 잘 맞을 거란 걸. 제대로 시작도…",
+              "imageUrl": "images/escape-room-seoul/d81d8d0c2794.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%ED%99%8D%EB%8C%80%EC%A0%90&name=%EA%B3%A0%EB%B0%B1"
+            },
+            {
+              "id": "28a4d2daea36",
+              "title": "삐릿-뽀",
+              "genre": "모험",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0.1,
+              "price": 28000,
+              "rating": 4.23,
+              "description": "삐릿삐리...삐삐...삐...삐리리리리리! 삐리리리릿 삐리리 삐리뽀리 삐릿-뽀!",
+              "imageUrl": "images/escape-room-seoul/28a4d2daea36.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%ED%99%8D%EB%8C%80%EC%A0%90&name=%EC%82%90%EB%A6%BF-%EB%BD%80"
+            },
+            {
+              "id": "c88c1f34ef9a",
+              "title": "홀리데이",
+              "genre": "판타지",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 25000,
+              "rating": 4.05,
+              "description": "오늘은 홀리데이.",
+              "imageUrl": "images/escape-room-seoul/c88c1f34ef9a.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%82%A4%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%ED%99%8D%EB%8C%80%EC%A0%90&name=%ED%99%80%EB%A6%AC%EB%8D%B0%EC%9D%B4"
+            }
+          ]
+        },
+        {
+          "id": "c32901856d",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 홍대 던전",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=3",
+          "themes": [
+            {
+              "id": "12da424d7917",
+              "title": "꿈의 공장",
+              "genre": "판타지",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 26000,
+              "rating": 4.08,
+              "description": "\"OK 컷! 모두 수고하셨습니다!!!\" 이게 무슨 소리냐고요? 꿈 제작이 완료됐음을 알리는 소리에요! 여기는 꿈의 공장, 당신의 오늘 하루를 마무리 짓고 내일 하루를…",
+              "imageUrl": "images/escape-room-seoul/12da424d7917.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%84&name=%EA%BF%88%EC%9D%98+%EA%B3%B5%EC%9E%A5"
+            },
+            {
+              "id": "e47cf2d1f344",
+              "title": "날씨의 신",
+              "genre": "판타지",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 26000,
+              "rating": 3.75,
+              "description": "2021년, 전 세계에 걸쳐 비가 내리지 않기 시작했다. 사람들은 황폐해진 땅을 보며 한숨만 쉴 뿐이었고, 수많은 어린아이들이 영양실조로 죽어가고 있었다. 이러한 광경을…",
+              "imageUrl": "images/escape-room-seoul/e47cf2d1f344.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%84&name=%EB%82%A0%EC%94%A8%EC%9D%98+%EC%8B%A0"
+            },
+            {
+              "id": "7cd2db4dc2c0",
+              "title": "사라진 보물 : 대저택의 비밀",
+              "genre": "잠입",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.4,
+              "price": 26000,
+              "rating": 3.75,
+              "description": "최근 3년간 각지에서 귀중한 보물들이 사라지고 있다는 소문이 들려온다. 세기의 명화들, 거대한 다이아몬드 등이 그 대상인데 신기한 점은 사라졌던 보물들이 간혹 다시…",
+              "imageUrl": "images/escape-room-seoul/7cd2db4dc2c0.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%84&name=%EC%82%AC%EB%9D%BC%EC%A7%84+%EB%B3%B4%EB%AC%BC+%3A+%EB%8C%80%EC%A0%80%ED%83%9D%EC%9D%98+%EB%B9%84%EB%B0%80"
+            },
+            {
+              "id": "06175b4dd1ca",
+              "title": "오늘 나는",
+              "genre": "감성",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 26000,
+              "rating": 4.29,
+              "description": "잠에서 깨고 나면, 오늘도 나는 새로운 사람이 되어 하루를 살아간다.",
+              "imageUrl": "images/escape-room-seoul/06175b4dd1ca.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%84&name=%EC%98%A4%EB%8A%98+%EB%82%98%EB%8A%94"
+            }
+          ]
+        },
+        {
+          "id": "db06d71974",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 던전 101",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=1",
+          "themes": [
+            {
+              "id": "a08a5472fe9c",
+              "title": "전래동 : 자살사건",
+              "genre": "추리",
+              "difficulty": 3.5,
+              "duration": "70분",
+              "scare": 0.5,
+              "price": 29000,
+              "rating": 4.38,
+              "description": "시스템을 이용해 시공간을 넘나드는 수사가 가능해진 사회. 과거 전래동에서 발생했던 의문의 자살 사건에 대한 진상을 파헤치기 위해, 우리는 포탈을 열고 2060년의 전래동으로…",
+              "imageUrl": "images/escape-room-seoul/a08a5472fe9c.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84+101&name=%EC%A0%84%EB%9E%98%EB%8F%99+%3A+%EC%9E%90%EC%82%B4%EC%82%AC%EA%B1%B4"
+            },
+            {
+              "id": "77fc3536a05e",
+              "title": "화생설화 : Blooming",
+              "genre": "판타지",
+              "difficulty": 3,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 27000,
+              "rating": 4.51,
+              "description": "자식 갖기를 원하는 부부에게 아기를 점지하고, 인간세상의 출산을 돕고, 갓난 아이를 보호하는 삼신. 이 삼신할매의 세계에서 나는 조수로서 일하고 있다. 오늘은 또…",
+              "imageUrl": "images/escape-room-seoul/77fc3536a05e.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84+101&name=%ED%99%94%EC%83%9D%EC%84%A4%ED%99%94+%3A+Blooming"
+            },
+            {
+              "id": "d03eb558f335",
+              "title": "LET’S PLAY TOGETHER",
+              "genre": "판타지",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 27000,
+              "rating": 3.77,
+              "description": "왕국의 연회에 초대된 음유시인! 아름다운 선율이 흐르고 있는 엘레~강스한 연회를 상상하며 왕국에 도착했는데 뜨↗드↗득↘ 삐↘비↘빅↗ 이게 무슨 음악이지? 새로운 왕국 스타일의 노래인가?…",
+              "imageUrl": "images/escape-room-seoul/d03eb558f335.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84+101&name=LET%E2%80%99S+PLAY+TOGETHER"
+            },
+            {
+              "id": "66c3fcb1d71b",
+              "title": "MST 엔터테인먼트",
+              "genre": "잠입",
+              "difficulty": 3,
+              "duration": "60분",
+              "scare": 1,
+              "price": 27000,
+              "rating": 4.26,
+              "description": "[단독] 유명 기획사 MST, 숨겨진 충격 비밀! 최근 우리나라 대표 기획사인 MST 엔터테인먼트가 의혹에 휩싸였다. 기획사 측은 해당 의혹에 관해 \"사실 무근이다.…",
+              "imageUrl": "images/escape-room-seoul/66c3fcb1d71b.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%EB%8D%98%EC%A0%84+101&name=MST+%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8"
+            }
+          ]
+        },
+        {
+          "id": "1688363a7a",
+          "brand": "BEATPHOBIA DUNGEON",
+          "name": "비트포비아 홍대 던전3",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://xdungeon.net/layout/res/home.php?go=rev.main&s_zizum=5",
+          "themes": [
+            {
+              "id": "527283f9872e",
+              "title": "경성 연쇄실종사건",
+              "genre": "추리",
+              "difficulty": 4,
+              "duration": "70분",
+              "scare": 0.6,
+              "price": 29000,
+              "rating": 4.6,
+              "description": "시스템을 이용해 시공간을 넘나드는 수사가 가능해진 사회. 의문의 연쇄실종사건에 대한 진상을 파헤치기 위해 우리는 포탈을 열고 1930년의 경성으로 향한다",
+              "imageUrl": "images/escape-room-seoul/527283f9872e.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%843&name=%EA%B2%BD%EC%84%B1+%EC%97%B0%EC%87%84%EC%8B%A4%EC%A2%85%EC%82%AC%EA%B1%B4"
+            },
+            {
+              "id": "32f682f6ac86",
+              "title": "그달동네",
+              "genre": "스릴러",
+              "difficulty": 2,
+              "duration": "70분",
+              "scare": 0,
+              "price": 29000,
+              "rating": 4.42,
+              "description": "마을이 붉게 물든 날 '그 남자가... 사람을 죽였어. 내가 똑똑히 봤다고. 그 남자도...그날 나를 본 게 틀림없어... 너무 무서워...' 그날, 모든 것이…",
+              "imageUrl": "images/escape-room-seoul/32f682f6ac86.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%843&name=%EA%B7%B8%EB%8B%AC%EB%8F%99%EB%84%A4"
+            },
+            {
+              "id": "a90a1c061740",
+              "title": "이미지 세탁소",
+              "genre": "판타지",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0.1,
+              "price": 29000,
+              "rating": 4.51,
+              "description": "어떤 이미지든 깨끗하게 지워드립니다! *예약 방문 필수*",
+              "imageUrl": "images/escape-room-seoul/a90a1c061740.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%843&name=%EC%9D%B4%EB%AF%B8%EC%A7%80+%EC%84%B8%ED%83%81%EC%86%8C"
+            },
+            {
+              "id": "c518a9a707da",
+              "title": "And I met E",
+              "genre": "판타지",
+              "difficulty": 3,
+              "duration": "70분",
+              "scare": 0.1,
+              "price": 29000,
+              "rating": 4.65,
+              "description": "공식 홈페이지에서 테마 소개를 확인해 주세요.",
+              "imageUrl": "images/escape-room-seoul/c518a9a707da.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%B9%84%ED%8A%B8%ED%8F%AC%EB%B9%84%EC%95%84+%ED%99%8D%EB%8C%80+%EB%8D%98%EC%A0%843&name=And+I+met+E"
+            }
+          ]
+        },
+        {
+          "id": "47d920225b",
+          "brand": "DECODER",
+          "name": "디코더",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "http://decoder.kr/",
+          "themes": [
+            {
+              "id": "81160df7e5a7",
+              "title": "Furious Revenge",
+              "genre": "잠입",
+              "difficulty": 3,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 3.46,
+              "description": "저한테 왜 그랬어요? 말해봐요. 믿었던 회사의 배신, 그리고 복수. 모든걸 함께 키워왔던 회사에서 한순간에 ?겨나게 된 그는 Revenge라 적혀있는 의문의 쪽지만을 남긴…",
+              "imageUrl": "images/escape-room-seoul/81160df7e5a7.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%94%94%EC%BD%94%EB%8D%94&name=Furious+Revenge"
+            },
+            {
+              "id": "c8da78b412ba",
+              "title": "Introverted Thief",
+              "genre": "잠입",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 3.48,
+              "description": "베일에 가려진 그녀, 미스터리 도난 사건 벌써 세 번째 도난 신고, 그리고 도난 하루 전 그 장소에서 우연히 만났던 그녀. 그녀는 나에게…",
+              "imageUrl": "images/escape-room-seoul/c8da78b412ba.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%94%94%EC%BD%94%EB%8D%94&name=Introverted+Thief"
+            },
+            {
+              "id": "9b9a3c387c98",
+              "title": "Tempo Rubato",
+              "genre": "기타",
+              "difficulty": 3.5,
+              "duration": "76분",
+              "scare": 0.1,
+              "price": 28000,
+              "rating": 4.45,
+              "description": "어느날 아침, 집 앞에 작은 상자가 하나 놓여 있었다. 제한시간 : 76분 24초 이용요금: 2인: 56,000원/ 3인: 81,000원/ 4인: 104,000원/ 5인: 125,000원/…",
+              "imageUrl": "images/escape-room-seoul/9b9a3c387c98.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%94%94%EC%BD%94%EB%8D%94&name=Tempo+Rubato"
+            }
+          ]
+        },
+        {
+          "id": "c9cbeca42e",
+          "brand": "EARTH STAR",
+          "name": "지구별 방탈출 홍대라스트시티점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://www.xn--2e0b040a4xj.com/",
+          "themes": [
+            {
+              "id": "ad27bf6990cb",
+              "title": "라스트코어",
+              "genre": "SF",
+              "difficulty": 2.5,
+              "duration": "90분",
+              "scare": 0.9,
+              "price": 32000,
+              "rating": 4.62,
+              "description": "런던이 그들에게 정복당한 이후로 삶은 더 팍팍해졌다 그래도 오늘은 먹고 살 만큼은 벌었군. 여느 때와 다름없이 가게 문을 닫고 자물쇠를 잠그는 순간…",
+              "imageUrl": "images/escape-room-seoul/ad27bf6990cb.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%BD%94%EC%96%B4"
+            },
+            {
+              "id": "ac8f656a709f",
+              "title": "멸종위기종 탐사대",
+              "genre": "모험",
+              "difficulty": 4.5,
+              "duration": "65분",
+              "scare": 0.2,
+              "price": 26000,
+              "rating": 4.55,
+              "description": "[모집공고] 신비로운 미지의 섬, 브이 아일랜드에서 멸종위기종을 탐사할 수 있는 단 한번의 기회! 탐사 조건에 부합하는 유능한 지원자들께서는 망설이지말고 신청 바랍니다. ※…",
+              "imageUrl": "images/escape-room-seoul/ac8f656a709f.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EB%A9%B8%EC%A2%85%EC%9C%84%EA%B8%B0%EC%A2%85+%ED%83%90%EC%82%AC%EB%8C%80"
+            },
+            {
+              "id": "dba0de40ca81",
+              "title": "섀도우",
+              "genre": "미스터리",
+              "difficulty": 2,
+              "duration": "75분",
+              "scare": 0.9,
+              "price": 28000,
+              "rating": 4.64,
+              "description": "In darkness, the shadows come alive. 어둠이 드리울 때, 그림자는 깨어난다.",
+              "imageUrl": "images/escape-room-seoul/dba0de40ca81.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EC%84%80%EB%8F%84%EC%9A%B0"
+            },
+            {
+              "id": "4c58895ec837",
+              "title": "스위티",
+              "genre": "기타",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 25000,
+              "rating": 4.24,
+              "description": "띵동! 주문 성공했습니다!",
+              "imageUrl": "images/escape-room-seoul/4c58895ec837.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EC%8A%A4%EC%9C%84%ED%8B%B0"
+            },
+            {
+              "id": "fe001f0a63ca",
+              "title": "스텔라",
+              "genre": "드라마",
+              "difficulty": 1.5,
+              "duration": "70분",
+              "scare": 0.1,
+              "price": 27000,
+              "rating": 4.49,
+              "description": "가장 빛나는 별, 스텔라",
+              "imageUrl": "images/escape-room-seoul/fe001f0a63ca.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EC%8A%A4%ED%85%94%EB%9D%BC"
+            },
+            {
+              "id": "e3eb82f8eaa6",
+              "title": "카부트",
+              "genre": "스릴러",
+              "difficulty": 1.5,
+              "duration": "65분",
+              "scare": 0,
+              "price": 28000,
+              "rating": 4.66,
+              "description": "안개가 자카르타를 뒤덮은 밤, 낡은 여관의 불빛이 희미하게 깜빡였다.",
+              "imageUrl": "images/escape-room-seoul/e3eb82f8eaa6.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%EC%B9%B4%EB%B6%80%ED%8A%B8"
+            },
+            {
+              "id": "5633187094ae",
+              "title": "纹身(문신)",
+              "genre": "스릴러",
+              "difficulty": 3,
+              "duration": "67분",
+              "scare": 0,
+              "price": 26000,
+              "rating": 4.67,
+              "description": "홍콩, 나의 첫 해외여행. 이 설렘의 순간을 기억하고 싶어. 작은 문신이나 새겨볼까? 再完美不过了…",
+              "imageUrl": "images/escape-room-seoul/5633187094ae.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=%E7%BA%B9%E8%BA%AB%28%EB%AC%B8%EC%8B%A0%29"
+            },
+            {
+              "id": "0d282c8fdcbe",
+              "title": "alone",
+              "genre": "미스터리",
+              "difficulty": 3,
+              "duration": "65분",
+              "scare": 1.4,
+              "price": 24000,
+              "rating": 4.28,
+              "description": "\"지훈아, 이제 더 이상 외롭지 않아도 돼.\"",
+              "imageUrl": "images/escape-room-seoul/0d282c8fdcbe.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EB%9D%BC%EC%8A%A4%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%A0%90&name=alone"
+            }
+          ]
+        },
+        {
+          "id": "368b7420c5",
+          "brand": "EARTH STAR",
+          "name": "지구별 방탈출 홍대어드벤처점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://xn--2e0b040a4xj.com/",
+          "themes": [
+            {
+              "id": "450072d0de4d",
+              "title": "미스터리",
+              "genre": "미스터리",
+              "difficulty": 4,
+              "duration": "85분",
+              "scare": 1.5,
+              "price": 28000,
+              "rating": 4.33,
+              "description": "오늘 하루, 당신께 잊지 못할 추억을 선물해 드리겠습니다. - 미스터리 트래블",
+              "imageUrl": "images/escape-room-seoul/450072d0de4d.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%EB%AF%B8%EC%8A%A4%ED%84%B0%EB%A6%AC"
+            },
+            {
+              "id": "f50f43356134",
+              "title": "아몬 : 새벽을 여는 소년",
+              "genre": "모험",
+              "difficulty": 1.5,
+              "duration": "70분",
+              "scare": 0.9,
+              "price": 28000,
+              "rating": 4.35,
+              "description": "전 아몬이에요! 헬리오폴리스에 살고 10살이죠! 좋아하는 건 할머니가 해주는 완두콩 수프예요!",
+              "imageUrl": "images/escape-room-seoul/f50f43356134.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%EC%95%84%EB%AA%AC+%3A+%EC%83%88%EB%B2%BD%EC%9D%84+%EC%97%AC%EB%8A%94+%EC%86%8C%EB%85%84"
+            },
+            {
+              "id": "50d42966c8ac",
+              "title": "잔향",
+              "genre": "드라마",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0,
+              "price": 25000,
+              "rating": 4.66,
+              "description": "그윽하게 피어오르는 약향 틈 사이로, 속삭이듯 스며드는 낯선 이의 잔향. 이곳을 감도는 향은, 누군가의 기억이자 침묵이었다.",
+              "imageUrl": "images/escape-room-seoul/50d42966c8ac.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%EC%9E%94%ED%96%A5"
+            },
+            {
+              "id": "e0f0dda6fb1a",
+              "title": "지난날을 잊었다",
+              "genre": "감성",
+              "difficulty": 2.5,
+              "duration": "65분",
+              "scare": 0.2,
+              "price": 23000,
+              "rating": 4.17,
+              "description": "남자는 하염없이 걷고 또 걸었다. 긴 걸음 끝에 작은 사진관을 마주했다. 문을 열고 들어가려는 찰나, 연분홍빛 벚꽃잎이 콧등을 스쳤다. 아, 봄이었구나.",
+              "imageUrl": "images/escape-room-seoul/e0f0dda6fb1a.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%EC%A7%80%EB%82%9C%EB%82%A0%EC%9D%84+%EC%9E%8A%EC%97%88%EB%8B%A4"
+            },
+            {
+              "id": "042fcca24ead",
+              "title": "퀘스트 : 여정의 시작",
+              "genre": "판타지",
+              "difficulty": 1.5,
+              "duration": "50분",
+              "scare": 0.1,
+              "price": 17000,
+              "rating": 3.86,
+              "description": "퀘스트를 수락하시겠습니까?",
+              "imageUrl": "images/escape-room-seoul/042fcca24ead.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%ED%80%98%EC%8A%A4%ED%8A%B8+%3A+%EC%97%AC%EC%A0%95%EC%9D%98+%EC%8B%9C%EC%9E%91"
+            },
+            {
+              "id": "77377d7d413c",
+              "title": "피노키오",
+              "genre": "공포",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 29000,
+              "rating": 4.79,
+              "description": "위태롭게 흔들리던 실이 끊어지자, 무대 위 나무 인형의 눈이 빛나기 시작했다. 삐걱.. 삐걱.. 마침내 피노키오는 인간이 되는 꿈을 꿨다.",
+              "imageUrl": "images/escape-room-seoul/77377d7d413c.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A7%80%EA%B5%AC%EB%B3%84+%EB%B0%A9%ED%83%88%EC%B6%9C+%ED%99%8D%EB%8C%80%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98%EC%A0%90&name=%ED%94%BC%EB%85%B8%ED%82%A4%EC%98%A4"
+            }
+          ]
+        },
+        {
+          "id": "bbe2f36e8c",
+          "brand": "ZERO WORLD",
+          "name": "제로월드 홍대점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "https://www.zerohongdae.com/",
+          "themes": [
+            {
+              "id": "d4c3b9eff0a8",
+              "title": "깜방탈출 : WAY OUT",
+              "genre": "잠입",
+              "difficulty": 4,
+              "duration": "75분",
+              "scare": 0,
+              "price": 28000,
+              "rating": 4.63,
+              "description": "DAY-1. 작전일을 하루 앞둔 나는 친구들과 함께 그간 준비한 계획을 마무리하려 한다.",
+              "imageUrl": "images/escape-room-seoul/d4c3b9eff0a8.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%ED%99%8D%EB%8C%80%EC%A0%90&name=%EA%B9%9C%EB%B0%A9%ED%83%88%EC%B6%9C+%3A+WAY+OUT"
+            },
+            {
+              "id": "e36270f7e708",
+              "title": "사랑...하는...감?",
+              "genre": "코미디",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 0.5,
+              "price": 23000,
+              "rating": 4.15,
+              "description": "그는.. 그녀를.. 사랑하는.. 감?",
+              "imageUrl": "images/escape-room-seoul/e36270f7e708.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%ED%99%8D%EB%8C%80%EC%A0%90&name=%EC%82%AC%EB%9E%91...%ED%95%98%EB%8A%94...%EA%B0%90%3F"
+            },
+            {
+              "id": "eaff3d18e548",
+              "title": "층간소음",
+              "genre": "공포",
+              "difficulty": 1.5,
+              "duration": "65분",
+              "scare": 0,
+              "price": 25000,
+              "rating": 4.79,
+              "description": "밤 10시. 편안한 보금자리가 지옥으로 바뀌는 시간. * NOX와 층간소음은 스토리를 공유합니다. 하지만 각각의 테마를 따로 플레이하셔도 무방합니다.",
+              "imageUrl": "images/escape-room-seoul/eaff3d18e548.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%ED%99%8D%EB%8C%80%EC%A0%90&name=%EC%B8%B5%EA%B0%84%EC%86%8C%EC%9D%8C"
+            },
+            {
+              "id": "b77cfb6670b1",
+              "title": "ALIVE",
+              "genre": "스릴러",
+              "difficulty": 3.5,
+              "duration": "80분",
+              "scare": 0,
+              "price": 30000,
+              "rating": 4.72,
+              "description": "Humankind must put an end to war, or war will put an end to humankind (인류가 전쟁을 끝내지 않으면, 전쟁이 인류를 끝낼…",
+              "imageUrl": "images/escape-room-seoul/b77cfb6670b1.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%ED%99%8D%EB%8C%80%EC%A0%90&name=ALIVE"
+            },
+            {
+              "id": "701ba9b4069e",
+              "title": "NOX",
+              "genre": "잠입",
+              "difficulty": 4,
+              "duration": "70분",
+              "scare": 0,
+              "price": 27000,
+              "rating": 4.45,
+              "description": "실수없이, 완벽하게. * NOX는 밀어내기 방식의 테마입니다. - 입장시간보다 15분이상 늦으실 경우 입장이 불가합니다.",
+              "imageUrl": "images/escape-room-seoul/701ba9b4069e.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%ED%99%8D%EB%8C%80%EC%A0%90&name=NOX"
+            }
+          ]
+        },
+        {
+          "id": "3bcdd1fbe2",
+          "brand": "ESCAPERS",
+          "name": "이스케이퍼스 1호점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "http://www.escapers.or.kr/",
+          "themes": [
+            {
+              "id": "257ace53539e",
+              "title": "라이브",
+              "genre": "공포",
+              "difficulty": 3.5,
+              "duration": "80분",
+              "scare": 0,
+              "price": 27000,
+              "rating": 3.65,
+              "description": "BJ 라이브와 함께 방송하고 싶다면 언제나 찾아와주세요. 라이브 스튜디오의 문은 항상 열려있습니다.",
+              "imageUrl": "images/escape-room-seoul/257ace53539e.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=%EB%9D%BC%EC%9D%B4%EB%B8%8C"
+            },
+            {
+              "id": "7fbcbf179dc4",
+              "title": "붉은머리연맹",
+              "genre": "추리",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 0.3,
+              "price": 22000,
+              "rating": 3.38,
+              "description": "가난, 질병, 전쟁과 싸우고 평화 수호를 추구하는 단체. 붉은 머리 연맹. 그들은 과거에 짙은 붉은 머리를 하고, 붉은 색만을 숭배했다. 하지만, 어느…",
+              "imageUrl": "images/escape-room-seoul/7fbcbf179dc4.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=%EB%B6%89%EC%9D%80%EB%A8%B8%EB%A6%AC%EC%97%B0%EB%A7%B9"
+            },
+            {
+              "id": "6e75e01d5330",
+              "title": "서커스",
+              "genre": "공포",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.17,
+              "description": "화려한 조명이 반짝이던 오래된 서커스 공연장. 어느 날 공중그네를 타던 서커스 단원이 추락사했다. 그녀의 죽음으로 인해 서커스장은 막을 내렸고, 오랜 시간이 흘렀다.…",
+              "imageUrl": "images/escape-room-seoul/6e75e01d5330.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=%EC%84%9C%EC%BB%A4%EC%8A%A4"
+            },
+            {
+              "id": "0abf431434cf",
+              "title": "싸이코메트리",
+              "genre": "스릴러",
+              "difficulty": 4,
+              "duration": "60분",
+              "scare": 0.8,
+              "price": 22000,
+              "rating": 3.84,
+              "description": "서울에서 일어난 4건의 살인사건은 동일범의 소행으로 판단된다. 그리고 나의 애인은 첫 번째 살인사건의 피해자였다. 살인범을 조사하기 위해 기자생활을 다시 시작하였지만, 치밀하고 주도면밀한…",
+              "imageUrl": "images/escape-room-seoul/0abf431434cf.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=%EC%8B%B8%EC%9D%B4%EC%BD%94%EB%A9%94%ED%8A%B8%EB%A6%AC"
+            },
+            {
+              "id": "a64e073a6f6d",
+              "title": "RS ROOM NORMAL",
+              "genre": "추리",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 3.67,
+              "description": "10여년 간 추리, 퍼즐 고수들을 찾고 있던 RS. 마침내 때가 되었고, ESCAPERS에서 빛나는 두뇌를 가진 플레이어를 모십니다. 탈출 시간 기록보다는 탈출 성공여부가…",
+              "imageUrl": "images/escape-room-seoul/a64e073a6f6d.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=RS+ROOM+NORMAL"
+            },
+            {
+              "id": "7b53257d90b1",
+              "title": "RS ROOM SPEED RUN",
+              "genre": "기타",
+              "difficulty": 5,
+              "duration": "120분",
+              "scare": 0,
+              "price": 27000,
+              "rating": 4.54,
+              "description": "시간이 부족하다. 어떻게 접근해야하고, 어디까지 생각해야 하는걸까. 난 이제 한계에 다다른 것일까...",
+              "imageUrl": "images/escape-room-seoul/7b53257d90b1.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+1%ED%98%B8%EC%A0%90&name=RS+ROOM+SPEED+RUN"
+            }
+          ]
+        },
+        {
+          "id": "bcbc17c906",
+          "brand": "ESCAPERS",
+          "name": "이스케이퍼스 2호점",
+          "area": "홍대",
+          "address": "서울 홍대 일대",
+          "reservationUrl": "http://www.escapers.co.kr/",
+          "themes": [
+            {
+              "id": "959cb870556c",
+              "title": "네모네모 마믈메는 무슨밀미 밌멌믈까?",
+              "genre": "아케이드",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.3,
+              "price": 23000,
+              "rating": 3.65,
+              "description": "네모네모 마믈메는 무슨밀미 밌멌믈까?",
+              "imageUrl": "images/escape-room-seoul/959cb870556c.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+2%ED%98%B8%EC%A0%90&name=%EB%84%A4%EB%AA%A8%EB%84%A4%EB%AA%A8+%EB%A7%88%EB%AF%88%EB%A9%94%EB%8A%94+%EB%AC%B4%EC%8A%A8%EB%B0%80%EB%AF%B8+%EB%B0%8C%EB%A9%8C%EB%AF%88%EA%B9%8C%3F"
+            },
+            {
+              "id": "e9f209f2b60e",
+              "title": "만약, 당신이 길을 잃었다면",
+              "genre": "야외",
+              "difficulty": 1.5,
+              "duration": "90분",
+              "scare": 0.1,
+              "price": 23000,
+              "rating": 4.09,
+              "description": "어린 시절을 떠올렸다. 새하얀 도화지를 꺼내 색연필로 바탕을 그렸다. 물감을 짜서 색깔도 입혔다. 하지만 도화지는 계속 새하얀 색이었다. 오늘은 어째서일까 도화지에 그린…",
+              "imageUrl": "images/escape-room-seoul/e9f209f2b60e.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+2%ED%98%B8%EC%A0%90&name=%EB%A7%8C%EC%95%BD%2C+%EB%8B%B9%EC%8B%A0%EC%9D%B4+%EA%B8%B8%EC%9D%84+%EC%9E%83%EC%97%88%EB%8B%A4%EB%A9%B4"
+            },
+            {
+              "id": "b38b8b98872b",
+              "title": "멍스타그램",
+              "genre": "드라마",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 23000,
+              "rating": 3.74,
+              "description": "\"당신은 개를 좋아하시나요?\" 당신은 모르는 개들의 은밀한 SNS. 고양이를 더 좋아하셔도 보여는 드릴게요!",
+              "imageUrl": "images/escape-room-seoul/b38b8b98872b.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+2%ED%98%B8%EC%A0%90&name=%EB%A9%8D%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8"
+            },
+            {
+              "id": "93581a5b76ad",
+              "title": "인생낚시",
+              "genre": "기타",
+              "difficulty": 4,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 23000,
+              "rating": 4.15,
+              "description": "내 이름은 김낚시 고향에서 검은빛 바다를 보며 생각에 잠겼다. 한 낚시꾼이 다가와 어디까지 낚아봤냐고 물었다. 바다낚시 때 검은수염고래까지 낚아봤다고 했더니, 아직 멀었다며…",
+              "imageUrl": "images/escape-room-seoul/93581a5b76ad.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+2%ED%98%B8%EC%A0%90&name=%EC%9D%B8%EC%83%9D%EB%82%9A%EC%8B%9C"
+            },
+            {
+              "id": "759da0921066",
+              "title": "테라포밍마스",
+              "genre": "SF",
+              "difficulty": 4,
+              "duration": "137분",
+              "scare": 0.3,
+              "price": 69000,
+              "rating": 4.17,
+              "description": "지난 수십년간 지속되어온 핵전쟁. 'United EARTH'연합은 더 이상의 평화수호가 무의미하다 판단하였고, 인류보존을 위한 화성개척 프로젝트를 발표한다. 화성개척은 새로운 세상으로의 도약입니다. 우리는 곧…",
+              "imageUrl": "images/escape-room-seoul/759da0921066.webp",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%8D%BC%EC%8A%A4+2%ED%98%B8%EC%A0%90&name=%ED%85%8C%EB%9D%BC%ED%8F%AC%EB%B0%8D%EB%A7%88%EC%8A%A4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "konkuk",
+      "name": "건대",
+      "caption": "지점 10개",
+      "branches": [
+        {
+          "id": "ba1dc91cee",
+          "brand": "NEXT EDITION",
+          "name": "넥스트에디션 건대 1호점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://nextedition.co.kr",
+          "themes": [
+            {
+              "id": "9d31735de7d9",
+              "title": "다시 봄",
+              "genre": "감성",
+              "difficulty": 2.5,
+              "duration": "80분",
+              "scare": 0.1,
+              "price": 27000,
+              "rating": 3.66,
+              "description": "이건 아주 진부한 이야기입니다.",
+              "imageUrl": "images/escape-room-seoul/9d31735de7d9.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=%EB%8B%A4%EC%8B%9C+%EB%B4%84"
+            },
+            {
+              "id": "dbb7a51e9321",
+              "title": "몬스터 : 10800",
+              "genre": "판타지",
+              "difficulty": 3.5,
+              "duration": "70분",
+              "scare": 0.4,
+              "price": 25000,
+              "rating": 3.81,
+              "description": "\"내 안에 몬스터가 깨어나고 있어\" 순간의 잘못된 선택이 커다란 악마를 만들어 냈다. 1분 1초, 급박함과 긴장감 속에 서서히 닥쳐오는 재앙. 내 손으로…",
+              "imageUrl": "images/escape-room-seoul/dbb7a51e9321.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=%EB%AA%AC%EC%8A%A4%ED%84%B0+%3A+10800"
+            },
+            {
+              "id": "738b9cff4185",
+              "title": "썸",
+              "genre": "로맨스",
+              "difficulty": 1.5,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 22000,
+              "rating": 3.23,
+              "description": "친구라기엔 너무 가깝고, 연인이라기엔 조금은 먼 우리. 우리는.. 어떤 사이일까?",
+              "imageUrl": "images/escape-room-seoul/738b9cff4185.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=%EC%8D%B8"
+            },
+            {
+              "id": "ff182b7371db",
+              "title": "이불 밖은 위험해",
+              "genre": "감성",
+              "difficulty": 1,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 3.77,
+              "description": "느지막한 주마 오후 이불속당신! 평소와는 다른 분위기에 이불 밖으로 나와보는데..",
+              "imageUrl": "images/escape-room-seoul/ff182b7371db.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=%EC%9D%B4%EB%B6%88+%EB%B0%96%EC%9D%80+%EC%9C%84%ED%97%98%ED%95%B4"
+            },
+            {
+              "id": "3a719e41f75f",
+              "title": "B아파트 13동 1313호",
+              "genre": "공포",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.31,
+              "description": "미스테리 동호회 \"블랙홀\"의 특별회원인 당신 오늘밤 \"블랙홀\"의 첫 전국 정모가 열린다 모임 장소는 일가족이 살해 했다는 저주받은 아파트 일가족이 살해 당한 후…",
+              "imageUrl": "images/escape-room-seoul/3a719e41f75f.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=B%EC%95%84%ED%8C%8C%ED%8A%B8+13%EB%8F%99+1313%ED%98%B8"
+            },
+            {
+              "id": "576bf2d38b23",
+              "title": "SOUL CHASER - 실종",
+              "genre": "야외",
+              "difficulty": 2,
+              "duration": "90분",
+              "scare": 0.1,
+              "price": 17000,
+              "rating": 3.1,
+              "description": "소울 체이서란, 이승에서 떠나지 못한 영혼들을 추적하여 찾아내는 자들이다. 이번 영혼에게는 어떠한 사연이 있는 것일까? * 야외에서 진행되는 테마입니다.",
+              "imageUrl": "images/escape-room-seoul/576bf2d38b23.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+1%ED%98%B8%EC%A0%90&name=SOUL+CHASER+-+%EC%8B%A4%EC%A2%85"
+            }
+          ]
+        },
+        {
+          "id": "35f132936e",
+          "brand": "NEXT EDITION",
+          "name": "넥스트에디션 건대 2호점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://www.nextedition.co.kr",
+          "themes": [
+            {
+              "id": "52bb55e15f2e",
+              "title": "동화나라 수비대",
+              "genre": "모험",
+              "difficulty": 3.5,
+              "duration": "80분",
+              "scare": 0.1,
+              "price": 26000,
+              "rating": 3.85,
+              "description": "귀여운 동화들로 이루어진 동화나라. 정체 모를 악당의 등장으로, 동화나라의 동화들이 엉망이 되고 있다! 이전과는 다른 이름, 다른 모습으로 동화나라를 찾은 여러분! 원작과…",
+              "imageUrl": "images/escape-room-seoul/52bb55e15f2e.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EB%8F%99%ED%99%94%EB%82%98%EB%9D%BC+%EC%88%98%EB%B9%84%EB%8C%80"
+            },
+            {
+              "id": "03af9bb41269",
+              "title": "방탈출 아카데미 (Hard 과정)",
+              "genre": "기타",
+              "difficulty": 4,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 4.01,
+              "description": "방탈출에 입문하고 싶으신 분들, 방탈출을 잘 하고 싶으신 분들을 위해 준비했습니다. 방탈출의 정석. 방탈출의 개념원리. 기출 유형 파악부터 복습까지! 마감 일주일 전입니다.…",
+              "imageUrl": "images/escape-room-seoul/03af9bb41269.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EB%B0%A9%ED%83%88%EC%B6%9C+%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8+%28Hard+%EA%B3%BC%EC%A0%95%29"
+            },
+            {
+              "id": "c201ec2e1f17",
+              "title": "방탈출 아카데미 (Master 과정)",
+              "genre": "기타",
+              "difficulty": 4,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 22000,
+              "rating": 4.14,
+              "description": "방탈출에 입문하고 싶으신 분들, 방탈출을 잘 하고 싶으신 분들을 위해 준비했습니다. 방탈출의 정석. 방탈출의 개념원리. 기출 유형 파악부터 복습까지! 마감 일주일 전입니다.…",
+              "imageUrl": "images/escape-room-seoul/c201ec2e1f17.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EB%B0%A9%ED%83%88%EC%B6%9C+%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8+%28Master+%EA%B3%BC%EC%A0%95%29"
+            },
+            {
+              "id": "13ccdcb71d1e",
+              "title": "방탈출 아카데미 (Normal 과정)",
+              "genre": "기타",
+              "difficulty": 3.5,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.67,
+              "description": "방탈출에 입문하고 싶으신 분들, 방탈출을 잘 하고 싶으신 분들을 위해 준비했습니다. 방탈출의 정석. 방탈출의 개념원리. 기출 유형 파악부터 복습까지! 마감 일주일 전입니다.…",
+              "imageUrl": "images/escape-room-seoul/13ccdcb71d1e.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EB%B0%A9%ED%83%88%EC%B6%9C+%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8+%28Normal+%EA%B3%BC%EC%A0%95%29"
+            },
+            {
+              "id": "22a99fa65708",
+              "title": "빛을 구해줘",
+              "genre": "판타지",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.1,
+              "price": 22000,
+              "rating": 3.54,
+              "description": "저희 빛의 요정들은 태양의 빛을 행성들에게 전달하는 역할을 하고 있어요. 오늘도 많은 분들이 견학 신청을 해주셨군요! 자, 그럼 지금부터 저희 요정들과 함께…",
+              "imageUrl": "images/escape-room-seoul/22a99fa65708.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EB%B9%9B%EC%9D%84+%EA%B5%AC%ED%95%B4%EC%A4%98"
+            },
+            {
+              "id": "ac8a199e56c1",
+              "title": "생존자",
+              "genre": "미스터리",
+              "difficulty": 1,
+              "duration": "65분",
+              "scare": 0,
+              "price": 29000,
+              "rating": 4.75,
+              "description": "\"생존자 발견! 생존자 발견! 선생님, 괜찮으세요?\" \"..\" \"선생님, 성함이 어떻게 되세요?\" \"유...유명호...입니다.\"",
+              "imageUrl": "images/escape-room-seoul/ac8a199e56c1.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EC%83%9D%EC%A1%B4%EC%9E%90"
+            },
+            {
+              "id": "df6a61621b0c",
+              "title": "어제, 그리고 오늘",
+              "genre": "드라마",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 22000,
+              "rating": 4.08,
+              "description": "어제와 다른 오늘을 살아갑니다 '이불밖은 위험해'의 속편입니다. 세계관이 연결되어 있어서 전작을 하시고 진행하시는것을 추천드립니다. :D (전작을 하시지 않아도 플레이 하시는데 지장은 없습니다!)",
+              "imageUrl": "images/escape-room-seoul/df6a61621b0c.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EC%96%B4%EC%A0%9C%2C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+%EC%98%A4%EB%8A%98"
+            },
+            {
+              "id": "847684aad728",
+              "title": "커튼콜",
+              "genre": "판타지",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.2,
+              "price": 24000,
+              "rating": 3.87,
+              "description": "오늘도 우리 인형극장을 찾아주셔서 감사합니다. 인형들과 함께하는 신나거나 감동적인 이야기들. 오늘은 과연 어떤 이야기가 여러분을 기다리고 있을까요? 바로 지금, 오늘 이야기의 화려한…",
+              "imageUrl": "images/escape-room-seoul/847684aad728.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=%EC%BB%A4%ED%8A%BC%EC%BD%9C"
+            },
+            {
+              "id": "a3e24492f547",
+              "title": "Make-up",
+              "genre": "기타",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0.9,
+              "price": 25000,
+              "rating": 3.78,
+              "description": "오늘은 화장이나 한 번 해볼까봐요.",
+              "imageUrl": "images/escape-room-seoul/a3e24492f547.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EA%B1%B4%EB%8C%80+2%ED%98%B8%EC%A0%90&name=Make-up"
+            }
+          ]
+        },
+        {
+          "id": "f91054e1e1",
+          "brand": "NEXT EDITION",
+          "name": "넥스트에디션 보네르관",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "https://www.nextedition.co.kr/",
+          "themes": [
+            {
+              "id": "2475d7102ef7",
+              "title": "세렌디피티",
+              "genre": "감성",
+              "difficulty": 3.5,
+              "duration": "100분",
+              "scare": 0.2,
+              "price": 29000,
+              "rating": 4.29,
+              "description": "나는 오늘, 잃어버린 꿈을 찾기위해서 사직서를 내려합니다.",
+              "imageUrl": "images/escape-room-seoul/2475d7102ef7.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%94%94%EC%85%98+%EB%B3%B4%EB%84%A4%EB%A5%B4%EA%B4%80&name=%EC%84%B8%EB%A0%8C%EB%94%94%ED%94%BC%ED%8B%B0"
+            }
+          ]
+        },
+        {
+          "id": "a4ece81624",
+          "brand": "SOLVER",
+          "name": "솔버 1호점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://solver-gd.com/",
+          "themes": [
+            {
+              "id": "e27a1ba770ad",
+              "title": "더 케이지",
+              "genre": "드라마",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.5,
+              "price": 22000,
+              "rating": 3.69,
+              "description": "그의 흔적을 따라 도착한 이 곳. 처음 와보는 곳 이지만, 어딘가 낯설지 않다... 이 곳에서 지독하게 K를 괴롭혀왔던 연쇄실종사건의 진상을 확인하고 이야기의…",
+              "imageUrl": "images/escape-room-seoul/e27a1ba770ad.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+1%ED%98%B8%EC%A0%90&name=%EB%8D%94+%EC%BC%80%EC%9D%B4%EC%A7%80"
+            },
+            {
+              "id": "2ed21fb2899f",
+              "title": "루시드 드림",
+              "genre": "공포",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 4.03,
+              "description": "현실과 구분이 되지 않는 꿈. 그 안에서 당신은 처음보는 소녀의 부름에 낯선 방에 이르게 된다. 자신을 J라 소개하는 그녀 J는 자신의 이야기를…",
+              "imageUrl": "images/escape-room-seoul/2ed21fb2899f.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+1%ED%98%B8%EC%A0%90&name=%EB%A3%A8%EC%8B%9C%EB%93%9C+%EB%93%9C%EB%A6%BC"
+            },
+            {
+              "id": "1e6f569b83b2",
+              "title": "콜드 케이스",
+              "genre": "미스터리",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.6,
+              "price": 22000,
+              "rating": 3.66,
+              "description": "전대 미문의 연쇄 실종사건 세상은 K를 범인이라 말하지만, 당사자 K는 미제사건이라 말한다. \" 난... 범인이 아니야...! \" J가 전한 메세지를 통해, K의…",
+              "imageUrl": "images/escape-room-seoul/1e6f569b83b2.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+1%ED%98%B8%EC%A0%90&name=%EC%BD%9C%EB%93%9C+%EC%BC%80%EC%9D%B4%EC%8A%A4"
+            }
+          ]
+        },
+        {
+          "id": "0b65aed47e",
+          "brand": "SOLVER",
+          "name": "솔버 2호점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://solver-gd.com/",
+          "themes": [
+            {
+              "id": "e2ece559e94f",
+              "title": "디어 마르시",
+              "genre": "감성",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0.2,
+              "price": 24000,
+              "rating": 4.16,
+              "description": "밤하늘, 나를 향해 가장 푸르게 빛나는 저 별, 나는 그에게 '에덴' 이라는 이름을 붙여주었다.",
+              "imageUrl": "images/escape-room-seoul/e2ece559e94f.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+2%ED%98%B8%EC%A0%90&name=%EB%94%94%EC%96%B4+%EB%A7%88%EB%A5%B4%EC%8B%9C"
+            },
+            {
+              "id": "e29cf5abbcc5",
+              "title": "무채색 인간",
+              "genre": "드라마",
+              "difficulty": 3.5,
+              "duration": "70분",
+              "scare": 0.4,
+              "price": 24000,
+              "rating": 3.92,
+              "description": "가까스로 모교를 빠져나오는 한경준. 조금씩 떠오르는 먼 과거의 기억들로 머리가 복잡해져 오던 중, 정문 앞에 수상하게 떨어져있는 일기장 하나를 발견하게 된다.",
+              "imageUrl": "images/escape-room-seoul/e29cf5abbcc5.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+2%ED%98%B8%EC%A0%90&name=%EB%AC%B4%EC%B1%84%EC%83%89+%EC%9D%B8%EA%B0%84"
+            },
+            {
+              "id": "b605f73b517c",
+              "title": "이층 복도 끝 화장실",
+              "genre": "공포",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 0,
+              "price": 24000,
+              "rating": 4.03,
+              "description": "잠에서 깨어난다. 멍하니 아무 생각도 하지않고 있는 시간이 많아졌다. 내가 간신히 나 스스로 기억해낼 수 있는 것은. 고작 내 이름 세글자 '한경준'…",
+              "imageUrl": "images/escape-room-seoul/b605f73b517c.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%86%94%EB%B2%84+2%ED%98%B8%EC%A0%90&name=%EC%9D%B4%EC%B8%B5+%EB%B3%B5%EB%8F%84+%EB%81%9D+%ED%99%94%EC%9E%A5%EC%8B%A4"
+            }
+          ]
+        },
+        {
+          "id": "22175c7733",
+          "brand": "XCAPE",
+          "name": "엑스케이프 건대점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://xcape.co.kr/",
+          "themes": [
+            {
+              "id": "b360e0ef5c6b",
+              "title": "501동 사람들",
+              "genre": "추리",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 25000,
+              "rating": 3.28,
+              "description": "1993년 부산의 목련아파트. 참사를 막기 위해 현재의 엑스파일러가 1993년 당일로 돌아가 비극을 막으려 한다. 왜. 무엇 때문에 그 일은 발생한 것인가! 과연…",
+              "imageUrl": "images/escape-room-seoul/b360e0ef5c6b.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B1%B4%EB%8C%80%EC%A0%90&name=501%EB%8F%99+%EC%82%AC%EB%9E%8C%EB%93%A4"
+            },
+            {
+              "id": "f0a67f462dc5",
+              "title": "숨바꼭질",
+              "genre": "스릴러",
+              "difficulty": 3,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.11,
+              "description": "딸이 사라졌어요 어린 딸이 사라졌다는 제보. 딸을 잃은 엄마는 세상을 잃은 슬픔에 빠진다. 모녀의 집은 최근 연이은 강도사건으로 떠들썩한 동네. 그러던 중…",
+              "imageUrl": "images/escape-room-seoul/f0a67f462dc5.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B1%B4%EB%8C%80%EC%A0%90&name=%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88"
+            },
+            {
+              "id": "383dde5cb0aa",
+              "title": "이도공간",
+              "genre": "판타지",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0.9,
+              "price": 22000,
+              "rating": 2.85,
+              "description": "꿈인가? 현실인가? 더욱 깊은 곳으로 이끄는 소리가 들리면 나는 새가 되어 꿈속을 배회한다. 모든 것이 낯설고, 모든 것이 익숙하다. 나는 누구인가? 나를…",
+              "imageUrl": "images/escape-room-seoul/383dde5cb0aa.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B1%B4%EB%8C%80%EC%A0%90&name=%EC%9D%B4%EB%8F%84%EA%B3%B5%EA%B0%84"
+            },
+            {
+              "id": "6d164b813272",
+              "title": "짜불성설",
+              "genre": "잠입",
+              "difficulty": 3.5,
+              "duration": "75분",
+              "scare": 1.3,
+              "price": 27000,
+              "rating": 3.37,
+              "description": "취업을 위해 서울에 홀로 상경한 아들이 사라졌다는 실종 신고가 접수됐다. 평소 자주 연락하던 아들이 갑자기 소식이 끊겼는데, 초동수사의 중요함을 알기에 수사관들은 긴박하게…",
+              "imageUrl": "images/escape-room-seoul/6d164b813272.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EA%B1%B4%EB%8C%80%EC%A0%90&name=%EC%A7%9C%EB%B6%88%EC%84%B1%EC%84%A4"
+            }
+          ]
+        },
+        {
+          "id": "773f7d0231",
+          "brand": "XCAPE",
+          "name": "엑스케이프 뉴케이스",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "https://xcape.co.kr/nc/reservation",
+          "themes": [
+            {
+              "id": "a0bddf49e113",
+              "title": "이름없는집",
+              "genre": "미스터리",
+              "difficulty": 3,
+              "duration": "70분",
+              "scare": 1.3,
+              "price": 26000,
+              "rating": 3.65,
+              "description": "층간소음 신고로 찾아간 오래된 빌라 4층. 몇 년 동안 아무도 드나든 적 없었다는 이웃의 증언. 그런데 비어 있어야 할 그곳에서, 정체를 알…",
+              "imageUrl": "images/escape-room-seoul/a0bddf49e113.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%89%B4%EC%BC%80%EC%9D%B4%EC%8A%A4&name=%EC%9D%B4%EB%A6%84%EC%97%86%EB%8A%94%EC%A7%91"
+            },
+            {
+              "id": "fe98f8213fd5",
+              "title": "인지상점",
+              "genre": "잠입",
+              "difficulty": 2.5,
+              "duration": "70분",
+              "scare": 0.6,
+              "price": 26000,
+              "rating": 3.5,
+              "description": "사라진 딸을 찾아주세요. 세상에 하나밖에 없는 착하고 소중한 딸을 찾는 아버지의 간절한 바람. 엑스파일러는 마지막 발신 신호를 찾아 위치를 추적해 찾아낸, 정체불명…",
+              "imageUrl": "images/escape-room-seoul/fe98f8213fd5.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%89%B4%EC%BC%80%EC%9D%B4%EC%8A%A4&name=%EC%9D%B8%EC%A7%80%EC%83%81%EC%A0%90"
+            },
+            {
+              "id": "b240bfc713d5",
+              "title": "침묵의 목격자",
+              "genre": "추리",
+              "difficulty": 3,
+              "duration": "70분",
+              "scare": 0.9,
+              "price": 26000,
+              "rating": 3.57,
+              "description": "한 가정집에서 발생한 의문의 화재. 모든 것이 소실된 가운데 구조된 형제. 단 하나의 단서도 남지 않은 사건을 해결하기 위해, 엑스파일러가 투입된다. 과연…",
+              "imageUrl": "images/escape-room-seoul/b240bfc713d5.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84+%EB%89%B4%EC%BC%80%EC%9D%B4%EC%8A%A4&name=%EC%B9%A8%EB%AC%B5%EC%9D%98+%EB%AA%A9%EA%B2%A9%EC%9E%90"
+            }
+          ]
+        },
+        {
+          "id": "3c9a1817e9",
+          "brand": "XCRIME",
+          "name": "엑스크라임",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://www.x-crime.com",
+          "themes": [
+            {
+              "id": "4f0e34359cb6",
+              "title": "베다바리",
+              "genre": "드라마",
+              "difficulty": 3.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.23,
+              "description": "1992년, 부산의 작은 동네 구설동. 그 끝 골목에 위치한 가게에서 수상한 도난신고가 접수 되었다. 이 가게는 동네 상인들로 인한 흉흉한 소문과 텃세로…",
+              "imageUrl": "images/escape-room-seoul/4f0e34359cb6.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%ED%81%AC%EB%9D%BC%EC%9E%84&name=%EB%B2%A0%EB%8B%A4%EB%B0%94%EB%A6%AC"
+            },
+            {
+              "id": "d58a929d47f8",
+              "title": "운필귀정",
+              "genre": "추리",
+              "difficulty": 3,
+              "duration": "70분",
+              "scare": 1.3,
+              "price": 24000,
+              "rating": 3.3,
+              "description": "과거 2004년, 지하B상가에서 원인미상 화재 사고가 일어나 폐허로 방치 되었는데. 최근, 이 지하상가에 무단침입 신고가 자주 접수되고. 공소시효가 70분남은 미제사건 현장에 엑스파일러가…",
+              "imageUrl": "images/escape-room-seoul/d58a929d47f8.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%ED%81%AC%EB%9D%BC%EC%9E%84&name=%EC%9A%B4%ED%95%84%EA%B7%80%EC%A0%95"
+            },
+            {
+              "id": "823621413eff",
+              "title": "청림맨션",
+              "genre": "미스터리",
+              "difficulty": 2,
+              "duration": "60분",
+              "scare": 0,
+              "price": 22000,
+              "rating": 3.15,
+              "description": "1984년, 홍콩의 오래된 맨션. 젊은 부부와 홀어머니가 이사왔다. 그로부터 3주 뒤, 부부 중 아내의 모습이 보이지 않는다. 그들의 집 앞에서 풍기는 정체모를…",
+              "imageUrl": "images/escape-room-seoul/823621413eff.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%97%91%EC%8A%A4%ED%81%AC%EB%9D%BC%EC%9E%84&name=%EC%B2%AD%EB%A6%BC%EB%A7%A8%EC%85%98"
+            }
+          ]
+        },
+        {
+          "id": "994485cf11",
+          "brand": "ZERO WORLD",
+          "name": "제로월드 다이브 건대점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "https://zeroworldkorea.com",
+          "themes": [
+            {
+              "id": "efb5eedf61b8",
+              "title": "오르골",
+              "genre": "미스터리",
+              "difficulty": 1.5,
+              "duration": "70분",
+              "scare": 0,
+              "price": 28000,
+              "rating": 4.5,
+              "description": "2000년대 영국 의상 디자이너 마크 클라크는 며칠째 새 작품을 완성하지 못하고 있었다. 그러던 어느 날, 그에게 작은 소포가 도착했다. 안에 들어 있던…",
+              "imageUrl": "images/escape-room-seoul/efb5eedf61b8.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%EB%8B%A4%EC%9D%B4%EB%B8%8C+%EA%B1%B4%EB%8C%80%EC%A0%90&name=%EC%98%A4%EB%A5%B4%EA%B3%A8"
+            },
+            {
+              "id": "571765104569",
+              "title": "인터뷰",
+              "genre": "스릴러",
+              "difficulty": 1,
+              "duration": "70분",
+              "scare": 0,
+              "price": 28000,
+              "rating": 4.46,
+              "description": "2008년 영국, 새 대표원장을 선출해야하는 유명 지역 병원. 지역 신문 기자 '누트'는 유력 후보인 토미박사와 오후 3시 인터뷰를 한다. 귀가하던 중 중요한…",
+              "imageUrl": "images/escape-room-seoul/571765104569.png",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%EC%A0%9C%EB%A1%9C%EC%9B%94%EB%93%9C+%EB%8B%A4%EC%9D%B4%EB%B8%8C+%EA%B1%B4%EB%8C%80%EC%A0%90&name=%EC%9D%B8%ED%84%B0%EB%B7%B0"
+            }
+          ]
+        },
+        {
+          "id": "6108d4afa3",
+          "brand": "POINT NINE",
+          "name": "포인트나인 건대점",
+          "area": "건대",
+          "address": "서울 건대 일대",
+          "reservationUrl": "http://point-nine.com",
+          "themes": [
+            {
+              "id": "9263fa51b2ae",
+              "title": "ALBA",
+              "genre": "잠입",
+              "difficulty": 3.5,
+              "duration": "70분",
+              "scare": 0.9,
+              "price": 26000,
+              "rating": 4.33,
+              "description": "빛이 있는 곳엔 어둠도 있는 법. 구원자의 통치체제에도 반하는 무리가 있었으니 도심에서 떨어진 지역에 반정부군이 어느새 형성되었다. 반정부군 소속의 임원 Brian. 그는…",
+              "imageUrl": "images/escape-room-seoul/9263fa51b2ae.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%82%98%EC%9D%B8+%EA%B1%B4%EB%8C%80%EC%A0%90&name=ALBA"
+            },
+            {
+              "id": "567136ec4578",
+              "title": "JACK IN THE SHOW",
+              "genre": "판타지",
+              "difficulty": 1,
+              "duration": "75분",
+              "scare": 4.7,
+              "price": 34000,
+              "rating": 4.72,
+              "description": "이용등급 : 전체이용가 이용시간 : 75분 장르 : 다크 판타지 공포도 : ★★☆☆☆ - 기존 RETURN, ALBA와 관계 없는 단독 테마입니다. -…",
+              "imageUrl": "images/escape-room-seoul/567136ec4578.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%82%98%EC%9D%B8+%EA%B1%B4%EB%8C%80%EC%A0%90&name=JACK+IN+THE+SHOW"
+            },
+            {
+              "id": "297dcbcc6223",
+              "title": "RETURN",
+              "genre": "드라마",
+              "difficulty": 2.5,
+              "duration": "60분",
+              "scare": 0.3,
+              "price": 24000,
+              "rating": 4.36,
+              "description": "가까운 미래, 화려한 밤, 그리고 빛의 도시. 이곳에서 마스크 상점을 운영하는 Zho 부부. 이들은 평소 훌륭한 인품과 좋은 금실로 모든 이웃에게 존경받지만,…",
+              "imageUrl": "images/escape-room-seoul/297dcbcc6223.jpg",
+              "sourceUrl": "https://bangtalpick.co.kr/theme.html?store=%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%82%98%EC%9D%B8+%EA%B1%B4%EB%8C%80%EC%A0%90&name=RETURN"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
