@@ -172,7 +172,10 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
         <p>30개 국가의 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
       </div>
 
-      <UnitToggler />
+      <div class="heading-actions">
+        <UnitToggler />
+        <button type="button" @click="router.push('/compare')">두 도시 날씨 비교하기 →</button>
+      </div>
     </header>
 
     <div class="api-state" :class="{ error: apiError }" aria-live="polite">
@@ -316,6 +319,32 @@ h1 {
   border-radius: 12px;
   background: rgb(255 255 255 / 92%);
   box-shadow: 0 8px 20px rgb(20 35 82 / 15%);
+}
+
+.heading-actions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 7px;
+  justify-items: end;
+}
+
+.heading-actions > button {
+  padding: 7px 10px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 9px;
+  color: #fff;
+  background: rgb(19 34 94 / 22%);
+  box-shadow: 0 6px 14px rgb(20 35 82 / 10%);
+  font-size: 9px;
+  font-weight: 850;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.heading-actions > button:hover {
+  background: rgb(19 34 94 / 36%);
+  transform: translateY(-1px);
 }
 
 .api-state {
@@ -463,6 +492,15 @@ h1 {
     align-items: flex-start;
     flex-direction: column;
     padding: 23px 20px;
+  }
+
+  .heading-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .heading-actions > button {
+    text-align: center;
   }
 
   h1 {

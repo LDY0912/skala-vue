@@ -2,9 +2,14 @@
 import { storeToRefs } from 'pinia'
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import FiveDayForecast from '../components/weather/FiveDayForecast.vue'
 import UnitToggler from '../components/weather/UnitToggler.vue'
 import { findGlobalWeatherById } from '../data/weatherLocations.js'
-import { fetchCurrentWeather, getWeatherErrorMessage } from '../services/weatherApi.js'
+import {
+  fetchCurrentWeather,
+  fetchWeatherForecast,
+  getWeatherErrorMessage,
+} from '../services/weatherApi.js'
 import { useWeatherUnitStore } from '../stores/weatherUnitStore.js'
 
 const props = defineProps({
@@ -20,6 +25,10 @@ const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
 const city = ref(findGlobalWeatherById(props.cityId) ?? null)
 const isLoading = ref(false)
 const apiError = ref('')
+const forecastItems = ref([])
+const forecastTimezoneOffset = ref(0)
+const isForecastLoading = ref(false)
+const forecastError = ref('')
 
 const weatherScene = computed(() => {
   const code = city.value?.weatherCode
@@ -88,16 +97,31 @@ async function loadWeather() {
   if (!selectedCity) return
 
   isLoading.value = true
+  isForecastLoading.value = true
   apiError.value = ''
+  forecastError.value = ''
 
-  // API 호출의 로딩·성공·오류·종료 상태를 try/catch/finally로 구분한다.
-  try {
-    city.value = await fetchCurrentWeather(selectedCity)
-  } catch (error) {
-    apiError.value = getWeatherErrorMessage(error)
-  } finally {
-    isLoading.value = false
+  // 현재 날씨와 5일 예보를 병렬 호출하고 각각의 오류 상태를 독립적으로 처리한다.
+  const [currentResult, forecastResult] = await Promise.allSettled([
+    fetchCurrentWeather(selectedCity),
+    fetchWeatherForecast(selectedCity),
+  ])
+
+  if (currentResult.status === 'fulfilled') {
+    city.value = currentResult.value
+  } else {
+    apiError.value = getWeatherErrorMessage(currentResult.reason)
   }
+
+  if (forecastResult.status === 'fulfilled') {
+    forecastItems.value = forecastResult.value.items
+    forecastTimezoneOffset.value = forecastResult.value.timezoneOffset
+  } else {
+    forecastError.value = getWeatherErrorMessage(forecastResult.reason)
+  }
+
+  isLoading.value = false
+  isForecastLoading.value = false
 }
 
 onMounted(loadWeather)
@@ -174,58 +198,78 @@ onMounted(loadWeather)
 
       <section class="detail-grid" aria-label="상세 관측 정보">
         <article>
-          <span>💧 습도</span>
+          <span>습도</span>
           <strong>{{ city.humidity }}%</strong>
         </article>
         <article>
-          <span>🔵 기압</span>
+          <span>기압</span>
           <strong>{{ city.pressure ?? '-' }} hPa</strong>
         </article>
         <article>
-          <span>👁️ 가시거리</span>
+          <span>가시거리</span>
           <strong>{{ visibility }} km</strong>
         </article>
         <article>
-          <span>☁️ 운량</span>
+          <span>운량</span>
           <strong>{{ city.cloudiness ?? '-' }}%</strong>
         </article>
         <article>
-          <span>💨 풍속</span>
+          <span>풍속</span>
           <strong>{{ city.windSpeed }} m/s</strong>
         </article>
         <article>
-          <span>🧭 풍향</span>
+          <span>풍향</span>
           <strong>{{ windDirection }}</strong>
         </article>
         <article>
-          <span>🌬️ 돌풍</span>
+          <span>돌풍</span>
           <strong>{{ city.windGust == null ? '-' : `${city.windGust} m/s` }}</strong>
         </article>
         <article>
-          <span>🌐 좌표</span>
+          <span>좌표</span>
           <strong>{{ city.lat.toFixed(4) }}, {{ city.lon.toFixed(4) }}</strong>
         </article>
       </section>
 
       <section class="sun-times">
         <div>
-          <span>🌅 현지 일출</span>
+          <span>현지 일출</span>
           <strong>{{ formatLocalTime(city.sunrise) }}</strong>
         </div>
         <div>
-          <span>🌇 현지 일몰</span>
+          <span>현지 일몰</span>
           <strong>{{ formatLocalTime(city.sunset) }}</strong>
         </div>
       </section>
 
       <p class="observed-at">현지 관측 시각: {{ formatLocalTime(city.observedAt, true) }}</p>
+
+      <p v-if="isForecastLoading" class="notice">5일 예보를 불러오는 중입니다.</p>
+      <p v-else-if="forecastError" class="notice error">
+        5일 예보를 불러오지 못했습니다. {{ forecastError }}
+        <button type="button" @click="loadWeather">다시 시도</button>
+      </p>
+      <FiveDayForecast
+        v-else-if="forecastItems.length"
+        :forecasts="forecastItems"
+        :timezone-offset="forecastTimezoneOffset"
+      />
     </template>
 
     <section v-else class="error-card">요청한 도시 코드를 찾을 수 없습니다.</section>
 
-    <button class="back-button" type="button" @click="router.push('/')">
-      ← 세계 날씨 대시보드로 돌아가기
-    </button>
+    <div class="detail-actions">
+      <button class="back-button" type="button" @click="router.push('/')">
+        ← 세계 날씨 대시보드로 돌아가기
+      </button>
+      <button
+        class="compare-button"
+        type="button"
+        @click="router.push({ path: '/compare', query: { left: props.cityId } })"
+      >
+        이 도시와 다른 지역 비교하기 →
+      </button>
+    </div>
   </main>
 </template>
 
@@ -713,6 +757,28 @@ h1 {
   cursor: pointer;
 }
 
+.detail-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.compare-button {
+  padding: 10px 14px;
+  border: 1px solid #6667dc;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(135deg, #7071e4, #5152c8);
+  box-shadow: 0 7px 17px rgb(74 76 190 / 20%);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.compare-button:hover {
+  transform: translateY(-1px);
+}
+
 .back-button:hover {
   background: #252f42;
   transform: translateY(-1px);
@@ -724,6 +790,12 @@ h1 {
   border-color: rgb(255 255 255 / 28%);
   background: rgb(15 23 42 / 52%);
   backdrop-filter: blur(10px);
+}
+
+.weather-rain .compare-button,
+.weather-thunder .compare-button,
+.weather-clear.is-night .compare-button {
+  border-color: rgb(255 255 255 / 40%);
 }
 
 @keyframes sun-breathe {

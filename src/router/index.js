@@ -17,6 +17,12 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/compare',
+      name: 'weather-compare',
+      component: () => import('../views/WeatherCompareView.vue'),
+      meta: { wide: true },
+    },
+    {
       path: '/valorant',
       name: 'valorant-schedule',
       component: () => import('../views/ValorantScheduleView.vue'),

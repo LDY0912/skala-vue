@@ -9,6 +9,7 @@ const weatherClient = axios.create({
 })
 
 const requestCache = new Map()
+const forecastRequestCache = new Map()
 
 function requireApiKey() {
   if (apiKey) return
@@ -42,6 +43,24 @@ function normalizeWeather(city, data) {
   }
 }
 
+function normalizeForecastItem(data) {
+  return {
+    timestamp: data.dt * 1000,
+    temp: Math.round(data.main.temp * 10) / 10,
+    feelsLike: Math.round(data.main.feels_like * 10) / 10,
+    tempMin: Math.round(data.main.temp_min * 10) / 10,
+    tempMax: Math.round(data.main.temp_max * 10) / 10,
+    humidity: data.main.humidity,
+    status: data.weather?.[0]?.description ?? '날씨 정보 없음',
+    weatherCode: data.weather?.[0]?.id ?? null,
+    icon: data.weather?.[0]?.icon ?? null,
+    precipitationProbability: Math.round((data.pop ?? 0) * 100),
+    rainAmount: data.rain?.['3h'] ?? 0,
+    snowAmount: data.snow?.['3h'] ?? 0,
+    windSpeed: data.wind.speed,
+  }
+}
+
 export function fetchCurrentWeather(city) {
   requireApiKey()
 
@@ -70,6 +89,36 @@ export function fetchCurrentWeather(city) {
 
 export function fetchCurrentWeatherList(cities) {
   return Promise.all(cities.map((city) => fetchCurrentWeather(city)))
+}
+
+export function fetchWeatherForecast(city) {
+  requireApiKey()
+
+  if (forecastRequestCache.has(city.id)) return forecastRequestCache.get(city.id)
+
+  // OpenWeather 5 day / 3 hour Forecast 응답을 시간대별 카드 데이터로 변환한다.
+  const request = weatherClient
+    .get('/forecast', {
+      params: {
+        lat: city.lat,
+        lon: city.lon,
+        units: 'metric',
+        lang: 'kr',
+        appid: apiKey,
+      },
+    })
+    .then(({ data }) => ({
+      cityId: city.id,
+      timezoneOffset: data.city?.timezone ?? 0,
+      items: (data.list ?? []).map(normalizeForecastItem),
+    }))
+    .catch((error) => {
+      forecastRequestCache.delete(city.id)
+      throw error
+    })
+
+  forecastRequestCache.set(city.id, request)
+  return request
 }
 
 export function getWeatherErrorMessage(error) {

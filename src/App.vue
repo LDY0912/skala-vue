@@ -21,6 +21,9 @@ const route = useRoute()
         <RouterLink to="/">
           <span><strong>세계 날씨</strong><small>OpenWeather</small></span>
         </RouterLink>
+        <RouterLink to="/compare">
+          <span><strong>날씨 비교</strong><small>도시 VS 도시</small></span>
+        </RouterLink>
         <RouterLink to="/valorant">
           <span><strong>발로란트</strong><small>대회 일정</small></span>
         </RouterLink>
@@ -239,7 +242,7 @@ body {
 
   .site-header nav {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 4px;
   }
 
