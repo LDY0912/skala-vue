@@ -1,8 +1,7 @@
 <script setup>
-// 1. 상위로 입력 텍스트를 전달할 커스텀 이벤트 등록 (매크로)
+// 부모가 내려준 Props를 표시하고, 입력 변경은 Emits로 부모에게 전달한다.
 defineEmits(['update-query'])
 
-// 2. 상위로부터 현재 검색 상태 값을 수신 (한글 동기화 상태 유지용)
 defineProps({
   currentQuery: {
     type: String,

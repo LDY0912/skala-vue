@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY?.trim()
 
+// Axios 인스턴스에 공통 API 주소와 타임아웃을 설정한다.
 const weatherClient = axios.create({
   baseURL: 'https://api.openweathermap.org/data/2.5',
   timeout: 10000,
@@ -46,6 +47,7 @@ export function fetchCurrentWeather(city) {
 
   if (requestCache.has(city.id)) return requestCache.get(city.id)
 
+  // 좌표를 Query Parameter로 전달하고 응답을 화면용 날씨 객체로 변환한다.
   const request = weatherClient
     .get('/weather', {
       params: {
@@ -71,6 +73,7 @@ export function fetchCurrentWeatherList(cities) {
 }
 
 export function getWeatherErrorMessage(error) {
+  // Axios 오류 유형을 사용자가 이해할 수 있는 메시지로 변환한다.
   if (error?.code === 'MISSING_API_KEY') {
     return 'API 키가 없습니다. .env.local 파일을 확인해 주세요.'
   }

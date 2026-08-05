@@ -16,6 +16,7 @@ const route = useRoute()
         </span>
       </RouterLink>
 
+      <!-- RouterLink는 새로고침 없이 각 기능 화면으로 이동한다. -->
       <nav aria-label="화면 전환 메뉴">
         <RouterLink to="/">
           <span><strong>세계 날씨</strong><small>OpenWeather</small></span>
@@ -25,12 +26,6 @@ const route = useRoute()
         </RouterLink>
         <RouterLink to="/escape-room">
           <span><strong>방탈출</strong><small>테마 찾기</small></span>
-        </RouterLink>
-        <RouterLink to="/exercises">
-          <span><strong>과제 1–5</strong><small>Vue 실습</small></span>
-        </RouterLink>
-        <RouterLink to="/labs">
-          <span><strong>API · JWT</strong><small>통합 실습</small></span>
         </RouterLink>
       </nav>
     </header>
@@ -244,7 +239,7 @@ body {
 
   .site-header nav {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 4px;
   }
 
@@ -255,7 +250,6 @@ body {
     text-align: center;
   }
 
-  .site-header nav a > span:first-child,
   .site-header nav small {
     display: none;
   }

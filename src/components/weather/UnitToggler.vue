@@ -1,10 +1,10 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { useConfigStore } from '../../stores/configStore.js'
+import { useWeatherUnitStore } from '../../stores/weatherUnitStore.js'
 
-const configStore = useConfigStore()
-const { unit, unitSymbol } = storeToRefs(configStore)
-const { toggleUnit } = configStore
+const weatherUnitStore = useWeatherUnitStore()
+const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
+const { toggleUnit } = weatherUnitStore
 </script>
 
 <template>

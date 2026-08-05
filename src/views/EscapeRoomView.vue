@@ -53,7 +53,7 @@ function scareLabel(level) {
 
     <section class="overview" aria-label="방탈출 데이터 요약">
       <article>
-        <span>서울 상권</span>
+        <span>서울 지역</span>
         <strong>{{ regions.length }}</strong>
       </article>
       <article>
@@ -774,6 +774,7 @@ function scareLabel(level) {
   line-height: 1.55;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
 
 .theme-intro a {

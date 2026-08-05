@@ -1,6 +1,6 @@
 <template>
   <div class="base-dashboard-card">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 <style scoped>

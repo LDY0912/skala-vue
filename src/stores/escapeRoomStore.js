@@ -14,6 +14,7 @@ function readFavorites() {
 }
 
 export const useEscapeRoomStore = defineStore('escapeRoom', () => {
+  // 지역·지점 선택과 즐겨찾기를 View 밖의 Pinia 상태로 관리한다.
   const regions = ref(themeCatalog.regions)
   const validThemeIds = new Set(
     themeCatalog.regions.flatMap((region) =>
@@ -63,6 +64,7 @@ export const useEscapeRoomStore = defineStore('escapeRoom', () => {
   )
 
   const visibleThemes = computed(() => {
+    // 검색 조건에 따라 선택 지점 또는 서울 전체 테마를 파생한다.
     const query = searchQuery.value.trim().toLocaleLowerCase('ko-KR')
     const sourceThemes = isGlobalMode.value
       ? allThemes.value

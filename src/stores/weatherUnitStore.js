@@ -1,7 +1,8 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useConfigStore = defineStore('config', () => {
+// 여러 날씨 화면에서 공유하는 온도 단위를 Pinia Store 한 곳에서 관리한다.
+export const useWeatherUnitStore = defineStore('weatherUnit', () => {
   const unit = ref('celsius')
 
   const unitSymbol = computed(() => {

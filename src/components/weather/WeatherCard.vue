@@ -1,9 +1,9 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
-import { useConfigStore } from '../../stores/configStore.js'
+import { useWeatherUnitStore } from '../../stores/weatherUnitStore.js'
 
-// 1. 상위로부터 단방향 주입받을 객체 데이터 규격 검수 (매크로)
+// Props로 받은 도시 데이터는 자식 컴포넌트에서 직접 변경하지 않는다.
 const props = defineProps({
   cityItem: {
     type: Object,
@@ -19,11 +19,11 @@ const props = defineProps({
   },
 })
 
-// 2. 상위로 송신할 두 가지 경로의 커스텀 이벤트 식별자 등록 (매크로)
+// 상세보기·삭제 같은 사용자 행동은 Emits로 부모 컴포넌트에 알린다.
 const emit = defineEmits(['select-card', 'click-detail', 'remove-card'])
 
-const configStore = useConfigStore()
-const { unit, unitSymbol } = storeToRefs(configStore)
+const weatherUnitStore = useWeatherUnitStore()
+const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
 
 const displayTemp = computed(() => {
   const rawTemp = props.cityItem.temp

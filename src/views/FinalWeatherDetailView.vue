@@ -2,10 +2,10 @@
 import { storeToRefs } from 'pinia'
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
-import { findGlobalWeatherById } from '../data/weather.js'
+import UnitToggler from '../components/weather/UnitToggler.vue'
+import { findGlobalWeatherById } from '../data/weatherLocations.js'
 import { fetchCurrentWeather, getWeatherErrorMessage } from '../services/weatherApi.js'
-import { useConfigStore } from '../stores/configStore.js'
+import { useWeatherUnitStore } from '../stores/weatherUnitStore.js'
 
 const props = defineProps({
   cityId: {
@@ -15,8 +15,8 @@ const props = defineProps({
 })
 
 const router = useRouter()
-const configStore = useConfigStore()
-const { unit, unitSymbol } = storeToRefs(configStore)
+const weatherUnitStore = useWeatherUnitStore()
+const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
 const city = ref(findGlobalWeatherById(props.cityId) ?? null)
 const isLoading = ref(false)
 const apiError = ref('')
@@ -90,6 +90,7 @@ async function loadWeather() {
   isLoading.value = true
   apiError.value = ''
 
+  // API 호출의 로딩·성공·오류·종료 상태를 try/catch/finally로 구분한다.
   try {
     city.value = await fetchCurrentWeather(selectedCity)
   } catch (error) {

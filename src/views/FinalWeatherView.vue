@@ -1,20 +1,23 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import BaseDashboardCard from '../components/Exercise3Childs/BaseDashboardCard.vue'
-import SearchBar from '../components/Exercise3Childs/SearchBar.vue'
-import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
-import WeatherCard from '../components/Exercise3Childs/WeatherCard.vue'
-import { findGlobalWeatherById, globalWeatherLocations } from '../data/weather.js'
+// 화면을 작은 UI 컴포넌트로 나눠 검색창과 날씨 카드를 재사용한다.
+import BaseDashboardCard from '../components/weather/BaseDashboardCard.vue'
+import SearchBar from '../components/weather/SearchBar.vue'
+import UnitToggler from '../components/weather/UnitToggler.vue'
+import WeatherCard from '../components/weather/WeatherCard.vue'
+import { findGlobalWeatherById, globalWeatherLocations } from '../data/weatherLocations.js'
 import { fetchCurrentWeather, getWeatherErrorMessage } from '../services/weatherApi.js'
 
 const FAVORITES_STORAGE_KEY = 'skala-weather-favorites'
 const DEFAULT_FAVORITE_IDS = ['kr_seoul', 'jp_tokyo', 'us_new_york']
 
 const router = useRouter()
+// ref는 검색어와 API 요청 상태처럼 개별적으로 변하는 값을 관리한다.
 const searchQuery = ref('')
 const favoriteIds = ref(readFavoriteIds())
-const weatherById = ref(
+// reactive는 여러 도시 객체를 ID별로 묶은 반응형 컬렉션을 관리한다.
+const weatherById = reactive(
   Object.fromEntries(globalWeatherLocations.map((city) => [city.id, { ...city }])),
 )
 const selectedCityInfo = ref('도시를 검색해 메인 즐겨찾기에 추가해 보세요.')
@@ -45,9 +48,8 @@ function normalizeSearchText(value) {
   return value.trim().toLocaleLowerCase('ko-KR')
 }
 
-const favoriteWeatherList = computed(() =>
-  favoriteIds.value.map((id) => weatherById.value[id]).filter(Boolean),
-)
+// computed는 원본 상태가 바뀔 때 필요한 목록만 자동으로 다시 계산한다.
+const favoriteWeatherList = computed(() => favoriteIds.value.map((id) => weatherById[id]).filter(Boolean))
 
 const searchResults = computed(() => {
   const normalizedQuery = normalizeSearchText(searchQuery.value)
@@ -63,7 +65,7 @@ const searchResults = computed(() => {
 })
 
 const displayedSearchResults = computed(() =>
-  searchResults.value.map((city) => weatherById.value[city.id] ?? city),
+  searchResults.value.map((city) => weatherById[city.id] ?? city),
 )
 
 const observedAt = computed(() => {
@@ -91,16 +93,14 @@ async function loadLocations(locations) {
   results.forEach((result) => {
     if (result.status !== 'fulfilled') return
 
-    weatherById.value = {
-      ...weatherById.value,
-      [result.value.id]: result.value,
-    }
+    weatherById[result.value.id] = result.value
   })
 
   return results.filter((result) => result.status === 'rejected').map((result) => result.reason)
 }
 
 async function loadFavoriteWeather() {
+  // 요청 시작/종료와 실패 메시지를 상태로 분리해 템플릿에서 즉시 피드백한다.
   isLoading.value = true
   apiError.value = ''
 
@@ -144,6 +144,7 @@ function removeFavorite(cityId) {
 }
 
 function showDetail(cityId) {
+  // 버튼 이벤트에서 Vue Router의 프로그래밍 방식 이동을 사용한다.
   router.push(`/weather/${cityId}`)
 }
 
@@ -222,7 +223,7 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
     </BaseDashboardCard>
 
     <BaseDashboardCard>
-      <h3>⭐ 즐겨찾는 도시 날씨 ({{ favoriteWeatherList.length }})</h3>
+      <h3>즐겨찾는 도시 날씨 ({{ favoriteWeatherList.length }})</h3>
 
       <WeatherCard
         v-for="city in favoriteWeatherList"
