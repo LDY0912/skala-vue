@@ -21,6 +21,31 @@ const city = ref(findGlobalWeatherById(props.cityId) ?? null)
 const isLoading = ref(false)
 const apiError = ref('')
 
+const weatherScene = computed(() => {
+  const code = city.value?.weatherCode
+  const icon = city.value?.icon ?? ''
+  const status = city.value?.status ?? ''
+  const isNight = icon.endsWith('n')
+
+  if ((code >= 200 && code < 300) || /천둥|뇌우/.test(status)) {
+    return { type: 'thunder', isNight, label: '천둥번개' }
+  }
+  if ((code >= 300 && code < 600) || /비|이슬비|소나기/.test(status)) {
+    return { type: 'rain', isNight, label: '비' }
+  }
+  if ((code >= 600 && code < 700) || /눈/.test(status)) {
+    return { type: 'snow', isNight, label: '눈' }
+  }
+  if ((code >= 700 && code < 800) || /안개|박무|연무|황사/.test(status)) {
+    return { type: 'mist', isNight, label: '안개' }
+  }
+  if (code === 800 || icon.startsWith('01') || /맑음/.test(status)) {
+    return { type: 'clear', isNight, label: isNight ? '맑은 밤' : '화창함' }
+  }
+
+  return { type: 'clouds', isNight, label: '구름' }
+})
+
 function convertTemperature(celsius) {
   if (celsius == null) return '-'
   if (unit.value === 'celsius') return celsius
@@ -78,11 +103,31 @@ onMounted(loadWeather)
 </script>
 
 <template>
-  <main class="final-detail">
+  <main
+    class="final-detail"
+    :class="[`weather-${weatherScene.type}`, { 'is-night': weatherScene.isNight }]"
+  >
+    <div class="weather-atmosphere" aria-hidden="true">
+      <div class="sun-or-moon"><span></span></div>
+      <div class="effect-cloud cloud-one"></div>
+      <div class="effect-cloud cloud-two"></div>
+      <div class="effect-cloud cloud-three"></div>
+      <div class="rain-field">
+        <i v-for="drop in 24" :key="`rain-${drop}`" :style="{ '--i': drop }"></i>
+      </div>
+      <div class="snow-field">
+        <i v-for="flake in 20" :key="`snow-${flake}`" :style="{ '--i': flake }">✦</i>
+      </div>
+      <div class="mist-field">
+        <i v-for="line in 5" :key="`mist-${line}`" :style="{ '--i': line }"></i>
+      </div>
+      <div class="lightning-bolt"></div>
+    </div>
+
     <header class="detail-header">
       <div>
         <span>OpenWeather 실시간 관측</span>
-        <h1>📊 최종과제: 상세 날씨</h1>
+        <h1>최종과제: 상세 날씨</h1>
       </div>
       <UnitToggler />
     </header>
@@ -96,6 +141,7 @@ onMounted(loadWeather)
     <template v-if="city">
       <section class="weather-hero">
         <div>
+          <span class="scene-label">{{ weatherScene.label }} · LIVE</span>
           <p class="country">{{ city.flag }} {{ city.country }} · {{ city.countryCode }}</p>
           <h2>{{ city.name }}</h2>
           <p class="location">📍 {{ city.location }}</p>
@@ -171,9 +217,7 @@ onMounted(loadWeather)
         </div>
       </section>
 
-      <p class="observed-at">
-        현지 관측 시각: {{ formatLocalTime(city.observedAt, true) }}
-      </p>
+      <p class="observed-at">현지 관측 시각: {{ formatLocalTime(city.observedAt, true) }}</p>
     </template>
 
     <section v-else class="error-card">요청한 도시 코드를 찾을 수 없습니다.</section>
@@ -186,12 +230,290 @@ onMounted(loadWeather)
 
 <style scoped>
 .final-detail {
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
   padding: 24px;
   border: 1px solid rgb(224 229 239 / 90%);
   border-radius: 20px;
-  background: rgb(255 255 255 / 90%);
+  background: linear-gradient(145deg, #dbeafe, #f8fafc);
   box-shadow: 0 14px 38px rgb(24 37 63 / 9%);
   backdrop-filter: blur(10px);
+  transition: background 0.5s ease;
+}
+
+.final-detail > :not(.weather-atmosphere) {
+  position: relative;
+  z-index: 2;
+}
+
+.weather-atmosphere {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.weather-clear {
+  background:
+    radial-gradient(circle at 82% 8%, rgb(255 240 129 / 70%), transparent 29%),
+    linear-gradient(145deg, #fff4bd 0%, #ccecff 46%, #f8fbff 100%);
+}
+
+.weather-clear.is-night {
+  background:
+    radial-gradient(circle at 82% 8%, rgb(196 211 255 / 22%), transparent 25%),
+    linear-gradient(145deg, #111b39 0%, #263b69 52%, #465b85 100%);
+}
+
+.weather-clouds {
+  background: linear-gradient(145deg, #cbd5e1 0%, #e5ebf1 48%, #f8fafc 100%);
+}
+
+.weather-rain {
+  background: linear-gradient(145deg, #26364c 0%, #53677e 54%, #8293a5 100%);
+}
+
+.weather-thunder {
+  background:
+    radial-gradient(circle at 78% 12%, rgb(141 131 255 / 20%), transparent 28%),
+    linear-gradient(145deg, #101727 0%, #252a4f 50%, #423f70 100%);
+}
+
+.weather-snow {
+  background:
+    radial-gradient(circle at 20% 5%, rgb(255 255 255 / 75%), transparent 28%),
+    linear-gradient(145deg, #d8e9f6 0%, #edf7ff 48%, #fff 100%);
+}
+
+.weather-mist {
+  background: linear-gradient(145deg, #cfd8dc 0%, #e7ecee 50%, #f7f8f8 100%);
+}
+
+.sun-or-moon,
+.effect-cloud,
+.rain-field,
+.snow-field,
+.mist-field,
+.lightning-bolt {
+  display: none;
+}
+
+.weather-clear .sun-or-moon {
+  position: absolute;
+  top: 76px;
+  right: 42px;
+  display: block;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: #ffd84f;
+  box-shadow:
+    0 0 30px rgb(255 207 56 / 75%),
+    0 0 85px rgb(255 210 76 / 62%);
+  animation: sun-breathe 3.8s ease-in-out infinite;
+}
+
+.weather-clear .sun-or-moon span {
+  position: absolute;
+  inset: -34px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgb(255 215 79 / 62%) 0deg 7deg,
+    transparent 7deg 18deg
+  );
+  mask: radial-gradient(circle, transparent 0 49%, black 51% 100%);
+  animation: ray-spin 22s linear infinite;
+}
+
+.weather-clear.is-night .sun-or-moon {
+  width: 88px;
+  height: 88px;
+  background: #f2f2da;
+  box-shadow:
+    inset -20px -10px 0 #aab6d5,
+    0 0 28px rgb(222 229 255 / 55%),
+    0 0 70px rgb(192 205 255 / 34%);
+}
+
+.weather-clear.is-night .sun-or-moon span {
+  display: none;
+}
+
+.weather-clouds .effect-cloud,
+.weather-rain .effect-cloud,
+.weather-thunder .effect-cloud {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 72%);
+  filter: drop-shadow(0 10px 16px rgb(50 65 82 / 12%));
+  animation: cloud-drift 11s ease-in-out infinite alternate;
+}
+
+.effect-cloud::before,
+.effect-cloud::after {
+  position: absolute;
+  bottom: 8px;
+  border-radius: 50%;
+  background: inherit;
+  content: '';
+}
+
+.effect-cloud::before {
+  left: 25px;
+  width: 62px;
+  height: 62px;
+}
+
+.effect-cloud::after {
+  right: 23px;
+  width: 78px;
+  height: 78px;
+}
+
+.cloud-one {
+  top: 95px;
+  right: -20px;
+}
+
+.cloud-two {
+  top: 215px;
+  left: -62px;
+  scale: 0.72;
+  opacity: 0.68;
+  animation-delay: -4s !important;
+}
+
+.cloud-three {
+  top: 430px;
+  right: 12%;
+  scale: 0.5;
+  opacity: 0.4;
+  animation-delay: -7s !important;
+}
+
+.weather-rain .effect-cloud,
+.weather-thunder .effect-cloud {
+  background: rgb(191 202 215 / 50%);
+  filter: drop-shadow(0 12px 18px rgb(15 23 42 / 20%));
+}
+
+.weather-rain .rain-field,
+.weather-thunder .rain-field {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+
+.rain-field i {
+  position: absolute;
+  top: -60px;
+  left: calc((var(--i) - 1) * 4.25%);
+  width: 2px;
+  height: 30px;
+  border-radius: 999px;
+  background: linear-gradient(transparent, rgb(184 222 255 / 72%));
+  opacity: calc(0.36 + (var(--i) * 0.018));
+  transform: rotate(12deg);
+  animation: rain-fall 1.05s linear infinite;
+  animation-delay: calc(var(--i) * -0.11s);
+}
+
+.weather-snow .snow-field {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+
+.snow-field i {
+  position: absolute;
+  top: -30px;
+  left: calc((var(--i) - 1) * 5.1%);
+  color: rgb(255 255 255 / 88%);
+  font-size: calc(8px + (var(--i) * 0.35px));
+  font-style: normal;
+  text-shadow: 0 2px 7px rgb(75 110 140 / 22%);
+  animation: snow-fall 7s linear infinite;
+  animation-delay: calc(var(--i) * -0.31s);
+}
+
+.weather-mist .mist-field {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+
+.mist-field i {
+  position: absolute;
+  top: calc(90px + (var(--i) * 105px));
+  left: -20%;
+  width: 72%;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 58%), transparent);
+  filter: blur(8px);
+  opacity: calc(0.35 + (var(--i) * 0.06));
+  animation: mist-move 8s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i) * -1.1s);
+}
+
+.weather-thunder .lightning-bolt {
+  position: absolute;
+  top: 105px;
+  right: 72px;
+  display: block;
+  width: 48px;
+  height: 112px;
+  background: #fff6a6;
+  clip-path: polygon(55% 0, 100% 0, 64% 40%, 92% 40%, 18% 100%, 40% 55%, 8% 55%);
+  filter: drop-shadow(0 0 14px #dcd7ff) drop-shadow(0 0 25px #8b80ff);
+  opacity: 0;
+  animation: lightning-flash 5.5s linear infinite;
+}
+
+.scene-label {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  border: 1px solid rgb(81 92 124 / 14%);
+  border-radius: 999px;
+  color: #4c5c75;
+  background: rgb(255 255 255 / 48%);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.weather-rain .detail-header,
+.weather-thunder .detail-header,
+.weather-clear.is-night .detail-header {
+  border-bottom-color: rgb(255 255 255 / 22%);
+}
+
+.weather-rain .detail-header h1,
+.weather-thunder .detail-header h1,
+.weather-clear.is-night .detail-header h1 {
+  color: #f8fafc;
+}
+
+.weather-rain .detail-header span,
+.weather-thunder .detail-header span,
+.weather-clear.is-night .detail-header span {
+  color: #c8d7ff;
+}
+
+.detail-header :deep(.unit-toggler) {
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 11px;
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 7px 20px rgb(29 39 66 / 12%);
 }
 
 .detail-header {
@@ -258,11 +580,13 @@ h1 {
   overflow: hidden;
   margin-bottom: 14px;
   padding: 24px;
-  border: 1px solid #e0e5f3;
+  border: 1px solid rgb(255 255 255 / 48%);
   border-radius: 17px;
   background:
-    radial-gradient(circle at 90% 10%, rgb(67 191 224 / 17%), transparent 35%),
-    linear-gradient(135deg, #eef0ff, #effaff);
+    radial-gradient(circle at 90% 10%, rgb(255 255 255 / 38%), transparent 35%),
+    linear-gradient(135deg, rgb(255 255 255 / 78%), rgb(255 255 255 / 56%));
+  box-shadow: 0 10px 28px rgb(33 48 73 / 9%);
+  backdrop-filter: blur(12px);
 }
 
 .country,
@@ -289,8 +613,11 @@ h1 {
 }
 
 .weather-hero img {
+  position: relative;
+  z-index: 1;
   width: 96px;
   height: 96px;
+  filter: drop-shadow(0 8px 12px rgb(45 67 92 / 14%));
 }
 
 .metrics,
@@ -317,7 +644,9 @@ h1 {
   padding: 13px 14px;
   border: 1px solid #e4e8f0;
   border-radius: 11px;
-  background: #f9fafd;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 4px 14px rgb(33 48 73 / 5%);
+  backdrop-filter: blur(10px);
 }
 
 .metrics span,
@@ -349,7 +678,8 @@ h1 {
   padding: 12px;
   border: 1px solid #f1e3bd;
   border-radius: 11px;
-  background: #fff9e9;
+  background: rgb(255 249 233 / 86%);
+  backdrop-filter: blur(10px);
 }
 
 .observed-at {
@@ -357,6 +687,12 @@ h1 {
   color: #81909a;
   font-size: 11px;
   text-align: right;
+}
+
+.weather-rain .observed-at,
+.weather-thunder .observed-at,
+.weather-clear.is-night .observed-at {
+  color: rgb(241 245 249 / 78%);
 }
 
 .error-card {
@@ -376,7 +712,109 @@ h1 {
   cursor: pointer;
 }
 
+.back-button:hover {
+  background: #252f42;
+  transform: translateY(-1px);
+}
+
+.weather-rain .back-button,
+.weather-thunder .back-button,
+.weather-clear.is-night .back-button {
+  border-color: rgb(255 255 255 / 28%);
+  background: rgb(15 23 42 / 52%);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes sun-breathe {
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.07;
+  }
+}
+
+@keyframes ray-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes cloud-drift {
+  from {
+    translate: -18px 0;
+  }
+
+  to {
+    translate: 22px -7px;
+  }
+}
+
+@keyframes rain-fall {
+  from {
+    translate: -25px -80px;
+  }
+
+  to {
+    translate: 80px 820px;
+  }
+}
+
+@keyframes snow-fall {
+  0% {
+    translate: -10px -40px;
+    rotate: 0deg;
+  }
+
+  50% {
+    translate: 25px 350px;
+  }
+
+  100% {
+    translate: -18px 760px;
+    rotate: 300deg;
+  }
+}
+
+@keyframes mist-move {
+  from {
+    translate: -5% 0;
+    scale: 0.9 1;
+  }
+
+  to {
+    translate: 65% 8px;
+    scale: 1.2 1;
+  }
+}
+
+@keyframes lightning-flash {
+  0%,
+  42%,
+  47%,
+  100% {
+    opacity: 0;
+  }
+
+  43%,
+  45% {
+    opacity: 0.92;
+  }
+
+  44%,
+  46% {
+    opacity: 0.2;
+  }
+}
+
 @media (max-width: 560px) {
+  .final-detail {
+    min-height: 620px;
+    padding: 18px;
+  }
+
   .detail-header {
     align-items: flex-start;
     flex-direction: column;
@@ -393,6 +831,45 @@ h1 {
 
   .sun-times {
     flex-direction: column;
+  }
+
+  .weather-hero {
+    padding: 20px;
+  }
+
+  .weather-clear .sun-or-moon {
+    top: 138px;
+    right: -18px;
+    scale: 0.72;
+    opacity: 0.72;
+  }
+
+  .cloud-one {
+    right: -72px;
+  }
+
+  .cloud-three {
+    display: none !important;
+  }
+
+  .weather-thunder .lightning-bolt {
+    right: 25px;
+    scale: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-or-moon,
+  .sun-or-moon span,
+  .effect-cloud {
+    animation: none !important;
+  }
+
+  .rain-field,
+  .snow-field,
+  .mist-field,
+  .lightning-bolt {
+    display: none !important;
   }
 }
 </style>

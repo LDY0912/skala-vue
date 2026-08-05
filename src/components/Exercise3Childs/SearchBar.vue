@@ -36,11 +36,11 @@ defineProps({
   font-weight: 800;
   line-height: 1.5;
 }
-
+/*
 .search-section h3::before {
   content: '🔍';
   margin-right: 8px;
-}
+} */
 
 input {
   display: block;
@@ -69,5 +69,4 @@ p {
   font-size: 11px;
   line-height: 1.55;
 }
-
 </style>

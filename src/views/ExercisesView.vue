@@ -10,7 +10,7 @@ import UnitToggler from '../components/Exercise3Childs/UnitToggler.vue'
   <main class="exercises-layout">
     <div class="collection-heading">
       <p>Vue 기초부터 Router와 Pinia까지</p>
-      <h1>📚 이전 과제 1~5</h1>
+      <h1>이전 과제 1~5</h1>
     </div>
 
     <Exercise1 />

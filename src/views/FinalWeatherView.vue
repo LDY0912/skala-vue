@@ -97,9 +97,7 @@ async function loadLocations(locations) {
     }
   })
 
-  return results
-    .filter((result) => result.status === 'rejected')
-    .map((result) => result.reason)
+  return results.filter((result) => result.status === 'rejected').map((result) => result.reason)
 }
 
 async function loadFavoriteWeather() {
@@ -169,7 +167,7 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
     <header class="final-heading">
       <div>
         <span class="eyebrow">Vue 3 · Axios · OpenWeather</span>
-        <h1>🌤️ 최종과제: 실시간 날씨 API</h1>
+        <h1>최종과제: 실시간 날씨 API</h1>
         <p>30개 국가의 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
       </div>
 
@@ -208,11 +206,7 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
             <small>{{ city.status }} · {{ city.temp }}°C</small>
           </div>
           <div class="search-result-actions">
-            <button
-              type="button"
-              :disabled="isFavorite(city.id)"
-              @click="addFavorite(city.id)"
-            >
+            <button type="button" :disabled="isFavorite(city.id)" @click="addFavorite(city.id)">
               {{ isFavorite(city.id) ? '즐겨찾기됨' : '즐겨찾기 추가' }}
             </button>
             <button type="button" class="detail-button" @click="showDetail(city.id)">

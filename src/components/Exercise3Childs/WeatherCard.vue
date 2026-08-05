@@ -42,7 +42,7 @@ const displayUnitSymbol = computed(() => (props.useConfigUnit ? unitSymbol.value
   <div
     class="weather-card"
     :class="{ removable }"
-    @click="emit('select-card', `${cityItem.name}이 선택되었습니다.`)"
+    @click="emit('select-card', `${cityItem.name}이(가) 선택되었습니다.`)"
   >
     <h4>
       <span v-if="cityItem.flag">{{ cityItem.flag }} </span>{{ cityItem.name }}

@@ -18,19 +18,15 @@ const route = useRoute()
 
       <nav aria-label="화면 전환 메뉴">
         <RouterLink to="/">
-          <span>🌤️</span>
           <span><strong>세계 날씨</strong><small>OpenWeather</small></span>
         </RouterLink>
         <RouterLink to="/valorant">
-          <span>⚡</span>
           <span><strong>발로란트</strong><small>대회 일정</small></span>
         </RouterLink>
         <RouterLink to="/exercises">
-          <span>📚</span>
           <span><strong>과제 1–5</strong><small>Vue 실습</small></span>
         </RouterLink>
         <RouterLink to="/labs">
-          <span>🧪</span>
           <span><strong>API · JWT</strong><small>통합 실습</small></span>
         </RouterLink>
       </nav>

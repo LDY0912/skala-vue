@@ -32,6 +32,7 @@ function normalizeWeather(city, data) {
     windSpeed: data.wind.speed,
     windDirection: data.wind.deg,
     windGust: data.wind.gust ?? null,
+    weatherCode: data.weather?.[0]?.id ?? null,
     icon: data.weather?.[0]?.icon ?? null,
     observedAt: data.dt * 1000,
     sunrise: data.sys.sunrise * 1000,
