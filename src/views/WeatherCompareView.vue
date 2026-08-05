@@ -9,6 +9,7 @@ import { fetchCurrentWeather, getWeatherErrorMessage } from '../services/weather
 const route = useRoute()
 const router = useRouter()
 const requestedLeftCity = findGlobalWeatherById(String(route.query.left ?? ''))
+// 두 필드가 한 선택 폼을 이루므로 reactive 객체로 함께 관리한다.
 const selection = reactive({
   leftId: requestedLeftCity?.id ?? 'kr_seoul',
   rightId: requestedLeftCity?.id === 'jp_tokyo' ? 'us_new_york' : 'jp_tokyo',
@@ -51,6 +52,7 @@ async function compareWeather() {
   const rightCity = findGlobalWeatherById(selection.rightId)
   if (!leftCity || !rightCity) return
 
+  // API 요청 상태를 ref로 분리해 로딩 문구, 버튼 비활성화, 오류 재시도를 제어한다.
   isLoading.value = true
   errorMessage.value = ''
 

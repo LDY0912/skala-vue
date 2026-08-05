@@ -1,6 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
+// 사이드바는 도시 선택만 Emits로 알리고 실제 화면 이동은 부모가 처리한다.
 const emit = defineEmits(['select-city'])
 
 const clockCities = [

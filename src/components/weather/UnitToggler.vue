@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useWeatherUnitStore } from '../../stores/weatherUnitStore.js'
 
 const weatherUnitStore = useWeatherUnitStore()
+// Pinia 값을 반응성을 유지한 ref로 꺼내 여러 화면이 같은 온도 단위를 공유한다.
 const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
 const { toggleUnit } = weatherUnitStore
 </script>

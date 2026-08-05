@@ -41,6 +41,10 @@ jobs:
       - name: Fetch Valorant schedule
         run: npm run fetch:valorant
 
+      # ESLint를 통과한 소스만 GitHub Pages 빌드와 배포를 진행한다.
+      - name: Lint
+        run: npm run lint
+
       - name: Build
         run: npm run build
 

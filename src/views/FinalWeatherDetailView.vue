@@ -13,6 +13,7 @@ import {
 } from '../services/weatherApi.js'
 import { useWeatherUnitStore } from '../stores/weatherUnitStore.js'
 
+// Router의 :cityId 동적 경로 값을 Props로 받아 상세 화면에서 사용할 도시를 결정한다.
 const props = defineProps({
   cityId: {
     type: String,

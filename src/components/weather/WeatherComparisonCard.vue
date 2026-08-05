@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 import { useWeatherUnitStore } from '../../stores/weatherUnitStore.js'
 
+// 부모 비교 화면이 API 결과와 승패 정보를 Props로 내려준다.
 const props = defineProps({
   city: {
     type: Object,
@@ -19,6 +20,7 @@ const props = defineProps({
   },
 })
 
+// 상세보기 요청은 Emits로 올려 보내 부모가 Router 이동을 담당하게 한다.
 const emit = defineEmits(['open-detail'])
 const weatherUnitStore = useWeatherUnitStore()
 const { unit, unitSymbol } = storeToRefs(weatherUnitStore)
