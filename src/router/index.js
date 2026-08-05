@@ -8,6 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'final-weather-home',
       component: () => import('../views/FinalWeatherView.vue'),
+      meta: { wide: true },
     },
     {
       // 동적 세그먼트로 선택한 도시 ID를 상세 화면에 Props로 전달한다.

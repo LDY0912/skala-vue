@@ -6,11 +6,13 @@ import BaseDashboardCard from '../components/weather/BaseDashboardCard.vue'
 import SearchBar from '../components/weather/SearchBar.vue'
 import UnitToggler from '../components/weather/UnitToggler.vue'
 import WeatherCard from '../components/weather/WeatherCard.vue'
+import WorldClockSidebar from '../components/weather/WorldClockSidebar.vue'
 import { findGlobalWeatherById, globalWeatherLocations } from '../data/weatherLocations.js'
 import { fetchCurrentWeather, getWeatherErrorMessage } from '../services/weatherApi.js'
 
 const FAVORITES_STORAGE_KEY = 'skala-weather-favorites'
 const DEFAULT_FAVORITE_IDS = ['kr_seoul', 'jp_tokyo', 'us_new_york']
+const worldMapImage = `url("${import.meta.env.BASE_URL}images/world-map-line.png")`
 
 const router = useRouter()
 // ref는 검색어와 API 요청 상태처럼 개별적으로 변하는 값을 관리한다.
@@ -49,7 +51,9 @@ function normalizeSearchText(value) {
 }
 
 // computed는 원본 상태가 바뀔 때 필요한 목록만 자동으로 다시 계산한다.
-const favoriteWeatherList = computed(() => favoriteIds.value.map((id) => weatherById[id]).filter(Boolean))
+const favoriteWeatherList = computed(() =>
+  favoriteIds.value.map((id) => weatherById[id]).filter(Boolean),
+)
 
 const searchResults = computed(() => {
   const normalizedQuery = normalizeSearchText(searchQuery.value)
@@ -164,92 +168,133 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
 </script>
 
 <template>
+  <Teleport to="body">
+    <div
+      class="world-map-backdrop"
+      :style="{ '--world-map-image': worldMapImage }"
+      aria-hidden="true"
+    ></div>
+  </Teleport>
+
   <main class="final-project">
-    <header class="final-heading">
-      <div>
-        <span class="eyebrow">Vue 3 · Axios · OpenWeather</span>
-        <h1>최종과제: 실시간 날씨 API</h1>
-        <p>전 세계 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
-      </div>
+    <div class="weather-dashboard">
+      <section class="weather-content" aria-label="세계 날씨 대시보드">
+        <header class="final-heading">
+          <div>
+            <span class="eyebrow">Vue 3 · Axios · OpenWeather</span>
+            <h1>최종과제: 실시간 날씨 API</h1>
+            <p>전 세계 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
+          </div>
 
-      <div class="heading-actions">
-        <UnitToggler />
-        <button type="button" @click="router.push('/compare')">두 도시 날씨 비교하기 →</button>
-      </div>
-    </header>
+          <div class="heading-actions">
+            <UnitToggler />
+            <button type="button" @click="router.push('/compare')">두 도시 날씨 비교하기 →</button>
+          </div>
+        </header>
 
-    <div class="api-state" :class="{ error: apiError }" aria-live="polite">
-      <template v-if="isLoading">⏳ 즐겨찾기 날씨를 불러오는 중입니다.</template>
-      <template v-else-if="apiError">
-        ⚠️ {{ apiError }}
-        <button type="button" @click="loadFavoriteWeather">다시 시도</button>
-      </template>
-      <template v-else-if="observedAt">
-        🟢 즐겨찾기 {{ favoriteWeatherList.length }}개 실시간 연동 · {{ observedAt }} 기준
-      </template>
-      <template v-else>⭐ 원하는 도시를 검색해 메인에 추가해 보세요.</template>
-    </div>
-
-    <BaseDashboardCard>
-      <SearchBar
-        :current-query="searchQuery"
-        placeholder="도시·국가명 또는 국가 코드 검색 (예: 파리, Canada, JP)"
-        @update-query="(value) => (searchQuery = value)"
-      />
-
-      <section v-if="searchQuery.trim()" class="search-results" aria-live="polite">
-        <div class="search-results-heading">
-          <strong>검색 결과 {{ displayedSearchResults.length }}개</strong>
-          <span v-if="isSearching">최신 날씨 확인 중...</span>
+        <div class="api-state" :class="{ error: apiError }" aria-live="polite">
+          <template v-if="isLoading">⏳ 즐겨찾기 날씨를 불러오는 중입니다.</template>
+          <template v-else-if="apiError">
+            ⚠️ {{ apiError }}
+            <button type="button" @click="loadFavoriteWeather">다시 시도</button>
+          </template>
+          <template v-else-if="observedAt">
+            🟢 즐겨찾기 {{ favoriteWeatherList.length }}개 실시간 연동 · {{ observedAt }} 기준
+          </template>
+          <template v-else>⭐ 원하는 도시를 검색해 메인에 추가해 보세요.</template>
         </div>
 
-        <article v-for="city in displayedSearchResults" :key="city.id" class="search-result">
-          <div>
-            <strong>{{ city.flag }} {{ city.name }}</strong>
-            <span>{{ city.country }} · {{ city.nameEn }}</span>
-            <small>{{ city.status }} · {{ city.temp }}°C</small>
-          </div>
-          <div class="search-result-actions">
-            <button type="button" :disabled="isFavorite(city.id)" @click="addFavorite(city.id)">
-              {{ isFavorite(city.id) ? '즐겨찾기됨' : '즐겨찾기 추가' }}
-            </button>
-            <button type="button" class="detail-button" @click="showDetail(city.id)">
-              상세보기
-            </button>
-          </div>
-        </article>
+        <BaseDashboardCard>
+          <SearchBar
+            :current-query="searchQuery"
+            placeholder="도시·국가명 또는 국가 코드 검색 (예: 파리, Canada, JP)"
+            @update-query="(value) => (searchQuery = value)"
+          />
 
-        <p v-if="displayedSearchResults.length === 0" class="empty-message">
-          검색 결과와 일치하는 도시 또는 국가가 없습니다.
-        </p>
+          <section v-if="searchQuery.trim()" class="search-results" aria-live="polite">
+            <div class="search-results-heading">
+              <strong>검색 결과 {{ displayedSearchResults.length }}개</strong>
+              <span v-if="isSearching">최신 날씨 확인 중...</span>
+            </div>
+
+            <article v-for="city in displayedSearchResults" :key="city.id" class="search-result">
+              <div>
+                <strong>{{ city.flag }} {{ city.name }}</strong>
+                <span>{{ city.country }} · {{ city.nameEn }}</span>
+                <small>{{ city.status }} · {{ city.temp }}°C</small>
+              </div>
+              <div class="search-result-actions">
+                <button type="button" :disabled="isFavorite(city.id)" @click="addFavorite(city.id)">
+                  {{ isFavorite(city.id) ? '즐겨찾기됨' : '즐겨찾기 추가' }}
+                </button>
+                <button type="button" class="detail-button" @click="showDetail(city.id)">
+                  상세보기
+                </button>
+              </div>
+            </article>
+
+            <p v-if="displayedSearchResults.length === 0" class="empty-message">
+              검색 결과와 일치하는 도시 또는 국가가 없습니다.
+            </p>
+          </section>
+        </BaseDashboardCard>
+
+        <BaseDashboardCard>
+          <h3>즐겨찾는 도시 날씨 ({{ favoriteWeatherList.length }})</h3>
+
+          <WeatherCard
+            v-for="city in favoriteWeatherList"
+            :key="city.id"
+            :city-item="city"
+            use-config-unit
+            removable
+            @select-card="(message) => (selectedCityInfo = message)"
+            @click-detail="showDetail"
+            @remove-card="removeFavorite"
+          />
+
+          <p v-if="favoriteWeatherList.length === 0" class="empty-message neutral">
+            저장한 도시가 없습니다. 위 검색 결과에서 도시를 추가해 주세요.
+          </p>
+        </BaseDashboardCard>
+
+        <p class="status-bar" aria-live="polite">{{ selectedCityInfo }}</p>
       </section>
-    </BaseDashboardCard>
 
-    <BaseDashboardCard>
-      <h3>즐겨찾는 도시 날씨 ({{ favoriteWeatherList.length }})</h3>
-
-      <WeatherCard
-        v-for="city in favoriteWeatherList"
-        :key="city.id"
-        :city-item="city"
-        use-config-unit
-        removable
-        @select-card="(message) => (selectedCityInfo = message)"
-        @click-detail="showDetail"
-        @remove-card="removeFavorite"
-      />
-
-      <p v-if="favoriteWeatherList.length === 0" class="empty-message neutral">
-        저장한 도시가 없습니다. 위 검색 결과에서 도시를 추가해 주세요.
-      </p>
-    </BaseDashboardCard>
-
-    <p class="status-bar" aria-live="polite">{{ selectedCityInfo }}</p>
+      <WorldClockSidebar @select-city="showDetail" />
+    </div>
   </main>
 </template>
 
 <style scoped>
 .final-project {
+  position: relative;
+  min-width: 0;
+}
+
+:global(#app) {
+  position: relative;
+  z-index: 1;
+}
+
+:global(body > .world-map-backdrop) {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  background: var(--world-map-image) center / cover no-repeat;
+  filter: contrast(0.82);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.weather-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(300px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.weather-content {
   min-width: 0;
 }
 
@@ -485,6 +530,12 @@ h1 {
   font-size: 11px;
   font-weight: 800;
   text-align: center;
+}
+
+@media (max-width: 960px) {
+  .weather-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
