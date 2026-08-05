@@ -169,7 +169,7 @@ onBeforeUnmount(() => window.clearTimeout(searchTimer))
       <div>
         <span class="eyebrow">Vue 3 · Axios · OpenWeather</span>
         <h1>최종과제: 실시간 날씨 API</h1>
-        <p>30개 국가의 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
+        <p>전 세계 주요 도시를 검색하고 자주 보는 날씨를 저장할 수 있습니다.</p>
       </div>
 
       <div class="heading-actions">

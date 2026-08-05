@@ -20,7 +20,7 @@ defineProps({
       <span aria-hidden="true">⌕</span>
       <div>
         <h3>도시 검색</h3>
-        <small>전 세계 30개 주요 도시의 실시간 날씨를 찾아보세요.</small>
+        <small>전 세계 주요 도시의 실시간 날씨를 찾아보세요.</small>
       </div>
     </div>
     <label class="search-input">

@@ -59,6 +59,10 @@ export const globalWeatherLocations = [
   createGlobalLocation('ar_buenos_aires', '부에노스아이레스', 'Buenos Aires', '아르헨티나', 'Argentina', 'AR', '🇦🇷', -34.6037, -58.3816, 21),
   createGlobalLocation('au_sydney', '시드니', 'Sydney', '호주', 'Australia', 'AU', '🇦🇺', -33.8688, 151.2093, 18),
   createGlobalLocation('nz_auckland', '오클랜드', 'Auckland', '뉴질랜드', 'New Zealand', 'NZ', '🇳🇿', -36.8509, 174.7645, 17),
+  createGlobalLocation('cl_punta_arenas', '푼타아레나스', 'Punta Arenas', '칠레', 'Chile', 'CL', '🇨🇱', -53.1638, -70.9171, 3),
+  createGlobalLocation('in_mumbai', '뭄바이', 'Mumbai', '인도', 'India', 'IN', '🇮🇳', 19.076, 72.8777, 29),
+  createGlobalLocation('lk_colombo', '콜롬보', 'Colombo', '스리랑카', 'Sri Lanka', 'LK', '🇱🇰', 6.9271, 79.8612, 29),
+  createGlobalLocation('aq_mcmurdo', '맥머도 기지', 'McMurdo Station', '남극', 'Antarctica', 'AQ', '🇦🇶', -77.8419, 166.6863, -21),
 ]
 
 export function findGlobalWeatherById(cityId) {

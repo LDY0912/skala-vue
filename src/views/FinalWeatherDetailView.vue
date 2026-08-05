@@ -134,14 +134,17 @@ onMounted(loadWeather)
   >
     <div class="weather-atmosphere" aria-hidden="true">
       <div class="sun-or-moon"><span></span></div>
+      <div class="sun-sparkles">
+        <i v-for="sparkle in 14" :key="`sparkle-${sparkle}`" :style="{ '--i': sparkle }">✦</i>
+      </div>
       <div class="effect-cloud cloud-one"></div>
       <div class="effect-cloud cloud-two"></div>
       <div class="effect-cloud cloud-three"></div>
       <div class="rain-field">
-        <i v-for="drop in 24" :key="`rain-${drop}`" :style="{ '--i': drop }"></i>
+        <i v-for="drop in 52" :key="`rain-${drop}`" :style="{ '--i': drop }"></i>
       </div>
       <div class="snow-field">
-        <i v-for="flake in 20" :key="`snow-${flake}`" :style="{ '--i': flake }">✦</i>
+        <i v-for="flake in 42" :key="`snow-${flake}`" :style="{ '--i': flake }">✦</i>
       </div>
       <div class="mist-field">
         <i v-for="line in 5" :key="`mist-${line}`" :style="{ '--i': line }"></i>
@@ -303,8 +306,9 @@ onMounted(loadWeather)
 
 .weather-clear {
   background:
-    radial-gradient(circle at 82% 8%, rgb(255 240 129 / 70%), transparent 29%),
-    linear-gradient(145deg, #fff4bd 0%, #ccecff 46%, #f8fbff 100%);
+    radial-gradient(circle at 82% 9%, rgb(255 240 111 / 95%), transparent 23%),
+    radial-gradient(circle at 20% 20%, rgb(255 255 255 / 82%), transparent 28%),
+    linear-gradient(145deg, #fff0a2 0%, #8ed9ff 48%, #eefaff 100%);
 }
 
 .weather-clear.is-night {
@@ -318,7 +322,9 @@ onMounted(loadWeather)
 }
 
 .weather-rain {
-  background: linear-gradient(145deg, #26364c 0%, #53677e 54%, #8293a5 100%);
+  background:
+    radial-gradient(circle at 75% 8%, rgb(89 158 219 / 28%), transparent 27%),
+    linear-gradient(145deg, #101d30 0%, #304e6c 52%, #567b96 100%);
 }
 
 .weather-thunder {
@@ -329,8 +335,9 @@ onMounted(loadWeather)
 
 .weather-snow {
   background:
-    radial-gradient(circle at 20% 5%, rgb(255 255 255 / 75%), transparent 28%),
-    linear-gradient(145deg, #d8e9f6 0%, #edf7ff 48%, #fff 100%);
+    radial-gradient(circle at 18% 4%, rgb(255 255 255 / 100%), transparent 25%),
+    radial-gradient(circle at 83% 22%, rgb(183 228 255 / 62%), transparent 30%),
+    linear-gradient(145deg, #a9d8f3 0%, #e4f5ff 49%, #fff 100%);
 }
 
 .weather-mist {
@@ -338,6 +345,7 @@ onMounted(loadWeather)
 }
 
 .sun-or-moon,
+.sun-sparkles,
 .effect-cloud,
 .rain-field,
 .snow-field,
@@ -348,33 +356,68 @@ onMounted(loadWeather)
 
 .weather-clear .sun-or-moon {
   position: absolute;
-  top: 76px;
-  right: 42px;
+  top: 60px;
+  right: 30px;
   display: block;
-  width: 104px;
-  height: 104px;
+  width: 132px;
+  height: 132px;
+  border: 2px solid rgb(255 248 176 / 78%);
   border-radius: 50%;
-  background: #ffd84f;
+  background: radial-gradient(circle at 38% 35%, #fff8a8, #ffce31 58%, #ffac16);
   box-shadow:
-    0 0 30px rgb(255 207 56 / 75%),
-    0 0 85px rgb(255 210 76 / 62%);
-  animation: sun-breathe 3.8s ease-in-out infinite;
+    0 0 24px rgb(255 241 126 / 100%),
+    0 0 70px rgb(255 207 56 / 90%),
+    0 0 150px rgb(255 199 48 / 68%);
+  animation: sun-breathe 3.2s ease-in-out infinite;
 }
 
 .weather-clear .sun-or-moon span {
   position: absolute;
-  inset: -34px;
+  inset: -56px;
   border-radius: 50%;
   background: repeating-conic-gradient(
     from 0deg,
-    rgb(255 215 79 / 62%) 0deg 7deg,
-    transparent 7deg 18deg
+    rgb(255 215 79 / 78%) 0deg 8deg,
+    transparent 8deg 17deg
   );
   mask: radial-gradient(circle, transparent 0 49%, black 51% 100%);
-  animation: ray-spin 22s linear infinite;
+  animation: ray-spin 16s linear infinite;
+}
+
+.weather-clear:not(.is-night) .sun-sparkles {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+
+.sun-sparkles i {
+  position: absolute;
+  top: calc(30px + (var(--i) * 47px));
+  left: calc((var(--i) - 1) * 7.4%);
+  color: rgb(255 255 222 / 92%);
+  font-size: calc(8px + (var(--i) * 0.38px));
+  font-style: normal;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 18px rgb(255 221 87 / 90%);
+  animation: sparkle-pulse 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -0.23s);
+}
+
+.weather-clear:not(.is-night) .weather-atmosphere::after {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 67% 20%, rgb(255 255 255 / 58%) 0 7px, transparent 9px),
+    radial-gradient(circle at 58% 29%, rgb(255 232 122 / 35%) 0 18px, transparent 22px),
+    linear-gradient(118deg, transparent 43%, rgb(255 255 255 / 18%) 50%, transparent 58%);
+  content: '';
+  animation: sunlight-wash 5s ease-in-out infinite alternate;
 }
 
 .weather-clear.is-night .sun-or-moon {
+  top: 76px;
+  right: 42px;
   width: 88px;
   height: 88px;
   background: #f2f2da;
@@ -445,8 +488,8 @@ onMounted(loadWeather)
 
 .weather-rain .effect-cloud,
 .weather-thunder .effect-cloud {
-  background: rgb(191 202 215 / 50%);
-  filter: drop-shadow(0 12px 18px rgb(15 23 42 / 20%));
+  background: rgb(145 167 190 / 76%);
+  filter: drop-shadow(0 15px 22px rgb(6 15 29 / 36%));
 }
 
 .weather-rain .rain-field,
@@ -456,18 +499,54 @@ onMounted(loadWeather)
   inset: 0;
 }
 
+.weather-rain .weather-atmosphere::before,
+.weather-thunder .weather-atmosphere::before {
+  position: absolute;
+  inset: -80px;
+  background: repeating-linear-gradient(
+    102deg,
+    transparent 0 30px,
+    rgb(177 222 255 / 12%) 31px 33px,
+    transparent 34px 52px
+  );
+  filter: blur(1px);
+  content: '';
+  animation: rain-sheet 1.15s linear infinite;
+}
+
+.weather-rain .weather-atmosphere::after,
+.weather-thunder .weather-atmosphere::after {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 18% 92%, rgb(169 220 255 / 24%), transparent 20%),
+    radial-gradient(ellipse at 72% 96%, rgb(169 220 255 / 22%), transparent 23%);
+  content: '';
+  animation: puddle-glow 2.2s ease-in-out infinite alternate;
+}
+
 .rain-field i {
   position: absolute;
   top: -60px;
-  left: calc((var(--i) - 1) * 4.25%);
-  width: 2px;
-  height: 30px;
+  left: calc((var(--i) - 1) * 1.96%);
+  width: 2.5px;
+  height: 42px;
   border-radius: 999px;
-  background: linear-gradient(transparent, rgb(184 222 255 / 72%));
-  opacity: calc(0.36 + (var(--i) * 0.018));
+  background: linear-gradient(transparent, rgb(198 232 255 / 96%));
+  box-shadow: 0 0 7px rgb(126 197 255 / 38%);
+  opacity: 0.82;
   transform: rotate(12deg);
-  animation: rain-fall 1.05s linear infinite;
-  animation-delay: calc(var(--i) * -0.11s);
+  animation: rain-fall 0.78s linear infinite;
+  animation-delay: calc(var(--i) * -0.057s);
+}
+
+.rain-field i:nth-child(3n) {
+  height: 58px;
+  opacity: 0.58;
+}
+
+.rain-field i:nth-child(4n) {
+  animation-duration: 0.64s;
 }
 
 .weather-snow .snow-field {
@@ -476,16 +555,41 @@ onMounted(loadWeather)
   inset: 0;
 }
 
+.weather-snow .weather-atmosphere::after {
+  position: absolute;
+  right: -10%;
+  bottom: -55px;
+  left: -10%;
+  height: 190px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 25%), rgb(255 255 255 / 93%));
+  box-shadow: 0 -28px 60px rgb(229 249 255 / 72%);
+  content: '';
+  animation: frost-glow 3.2s ease-in-out infinite alternate;
+}
+
 .snow-field i {
   position: absolute;
   top: -30px;
-  left: calc((var(--i) - 1) * 5.1%);
-  color: rgb(255 255 255 / 88%);
-  font-size: calc(8px + (var(--i) * 0.35px));
+  left: calc((var(--i) - 1) * 2.44%);
+  color: rgb(255 255 255 / 100%);
+  font-size: calc(7px + (var(--i) * 0.14px));
   font-style: normal;
-  text-shadow: 0 2px 7px rgb(75 110 140 / 22%);
-  animation: snow-fall 7s linear infinite;
-  animation-delay: calc(var(--i) * -0.31s);
+  text-shadow:
+    0 0 7px #fff,
+    0 3px 9px rgb(49 103 143 / 38%);
+  animation: snow-fall 5.8s linear infinite;
+  animation-delay: calc(var(--i) * -0.19s);
+}
+
+.snow-field i:nth-child(3n) {
+  font-size: 17px;
+  animation-duration: 7.4s;
+}
+
+.snow-field i:nth-child(5n) {
+  filter: blur(1px);
+  opacity: 0.7;
 }
 
 .weather-mist .mist-field {
@@ -815,6 +919,31 @@ h1 {
   }
 }
 
+@keyframes sparkle-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    scale: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+    scale: 1.35;
+  }
+}
+
+@keyframes sunlight-wash {
+  from {
+    opacity: 0.45;
+    translate: -2% 0;
+  }
+
+  to {
+    opacity: 0.9;
+    translate: 3% 1%;
+  }
+}
+
 @keyframes cloud-drift {
   from {
     translate: -18px 0;
@@ -835,6 +964,26 @@ h1 {
   }
 }
 
+@keyframes rain-sheet {
+  from {
+    translate: -30px -55px;
+  }
+
+  to {
+    translate: 55px 95px;
+  }
+}
+
+@keyframes puddle-glow {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
+
 @keyframes snow-fall {
   0% {
     translate: -10px -40px;
@@ -848,6 +997,18 @@ h1 {
   100% {
     translate: -18px 760px;
     rotate: 300deg;
+  }
+}
+
+@keyframes frost-glow {
+  from {
+    opacity: 0.68;
+    translate: 0 9px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
 
@@ -914,7 +1075,7 @@ h1 {
     top: 138px;
     right: -18px;
     scale: 0.72;
-    opacity: 0.72;
+    opacity: 0.9;
   }
 
   .cloud-one {
@@ -934,6 +1095,7 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .sun-or-moon,
   .sun-or-moon span,
+  .sun-sparkles,
   .effect-cloud {
     animation: none !important;
   }
@@ -943,6 +1105,11 @@ h1 {
   .mist-field,
   .lightning-bolt {
     display: none !important;
+  }
+
+  .weather-atmosphere::before,
+  .weather-atmosphere::after {
+    animation: none !important;
   }
 }
 </style>
